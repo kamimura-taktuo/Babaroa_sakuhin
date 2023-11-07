@@ -1,0 +1,380 @@
+body {background-color: rgb(0, 0, 0);}
+
+.logo h1 {
+  position: fixed;/*fixedを設定して固定*/
+  z-index: 999;/*最前面へ*/
+    left: 0%;
+    top: 0%;
+    transform: translate(-0%, 0%);
+}
+
+
+/*トップページの動画*/
+.video1{    
+    position: relative;
+    filter: brightness(65%);
+    z-index: -1;
+    width: 100%;
+    right:0;
+    left:0;
+    bottom:0;
+}
+
+/*動画とロゴの重ね*/
+.relative{
+  position: relative;
+}
+
+.absolute{
+  position: absolute;
+  width: 30%;
+  opacity: 1;
+  top: 0vh;
+  transform: translate(120%, 20%);
+}
+
+/*左上のロゴの設置*/
+.float ul {
+    display: inline-block;
+    
+}
+
+.float li {
+    display: inline-block;
+    list-style: none;
+    padding-top: 25px;
+    padding-left: 10px;
+
+}
+
+nav {
+    width: 100%;
+    height: 70px;
+    background-color: dimgray;
+    box-sizing: border-box;
+}
+
+/*タイトルの設定*/
+.title {
+    font-family: 'Cormorant', serif;
+    color: white;
+    font-weight: bold;
+    /*margin-top: 300px;*/
+    font-size: 8vw;
+}
+
+/*テキストの設定*/
+p1 {
+    color: white;
+    font-size: 2vw;
+}
+
+p2 {
+    color: white;
+    font-size: 1.2vw;
+}
+
+p3 {
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+p4{
+  color: #fff;
+  font-size: 2.5vw;
+}
+p5{
+  font-family: 'Cormorant', serif;
+  font-size: 1.2vw;
+}
+p6{
+  font-family: "Hannari";
+  color: #fff;
+  font-size: 2.5vw;
+}
+
+
+a {
+    display: block;
+    text-decoration: none;
+    color: white;
+}
+
+
+/*トップページの写真の配列*/
+#cards {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .card {
+    width: 30%;
+    height: 40vh;
+    border: 1px solid rgb(0, 0, 0);
+  }
+  
+  /*
+  .card:nth-child(2) {
+    margin-right: 10%;
+    margin-left: 10%;
+  }
+  */
+  
+  .picture img {
+    width: 100%;
+    height: 80%;
+    border-radius: 5px;
+    transition: all 0.5s;
+  }
+
+  .picture img:hover{
+    width: 105%;
+    height: 85%;
+  }
+  
+  /*
+  .description {
+    width: 100%;
+    height: 145px;
+    padding-right: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+  }
+  
+  .description p {
+    font-size: 13px;
+    color: dimgray;
+  }
+  */
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+.splash {
+    /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background:#333;
+  text-align:center;
+  color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  width:260px;
+}
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+
+.Page1 {
+  margin: 0 0 0 10%;
+  filter: brightness(80%);
+  border-radius: 30px;
+}
+
+.Subtitle {
+  font-family: "Hannari";
+  padding-top: 10%;
+  color: #fff;
+  font-size: 500%;
+}
+
+.Subtitle1 {
+  font-family: "Hannari";
+  padding-top: 10%;
+  color: #fff;
+  font-size: 1.5vw;
+}
+
+
+.Time{
+  font-size: 280%;
+  width: 49%;
+  color: #fff;
+  margin: 5% 0 0 20%;
+  padding: 0;
+}
+
+.Time1{
+  font-size: 240%;
+  width: 49%;
+  color: #fff;
+  margin: -25% 0 0 77.5%;
+  padding: 0;
+}
+
+
+.flex{
+  display: flex;
+  justify-content: space-between;
+}
+
+.Picture1{
+  width: 49%;
+  margin: 5% 0 0 7%;
+  filter: brightness(80%);
+  border-radius: 30px;
+}
+
+.center {
+  position: absolute;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  left: 50%;
+}
+
+/** Custom Select **/
+.custom-select-wrapper {
+  position: relative;
+  display: inline-block;
+  user-select: none;
+}
+  .custom-select-wrapper select {
+    display: none;
+  }
+  .custom-select {
+    position: relative;
+    display: inline-block;
+  }
+    .custom-select-trigger {
+      position: relative;
+      display: block;
+      width: 300px;
+      padding: 0 84px 0 22px;
+      font-size: 22px;
+      font-weight: 300;
+      color: #fff;
+      line-height: 40px;
+      background: #505050;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+      .custom-select-trigger:after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 10px; height: 10px;
+        top: 50%; right: 25px;
+        margin-top: -3px;
+        border-bottom: 1px solid #fff;
+        border-right: 1px solid #fff;
+        transform: rotate(45deg) translateY(-50%);
+        transition: all .4s ease-in-out;
+        transform-origin: 50% 0;
+      }
+      .custom-select.opened .custom-select-trigger:after {
+        margin-top: 3px;
+        transform: rotate(-135deg) translateY(-50%);
+      }
+  .custom-options {
+    position: absolute;
+    display: block;
+    top: 100%; left: 0; right: 0;
+    min-width: 100%;
+    margin: 15px 0;
+    border: 1px solid #b5b5b5;
+    border-radius: 4px;
+    box-sizing: border-box;
+    box-shadow: 0 2px 1px rgba(0,0,0,.07);
+    background: #fff;
+    transition: all .4s ease-in-out;
+    
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-15px);
+  }
+  .custom-select.opened .custom-options {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+    .custom-options:before {
+      position: absolute;
+      display: block;
+      content: '';
+      bottom: 100%; right: 25px;
+      width: 7px; height: 7px;
+      margin-bottom: -4px;
+      border-top: 1px solid #b5b5b5;
+      border-left: 1px solid #b5b5b5;
+      background: #fff;
+      transform: rotate(45deg);
+      transition: all .4s ease-in-out;
+    }
+    .option-hover:before {
+      background: #f9f9f9;
+    }
+    .custom-option {
+      position: relative;
+      display: block;
+      padding: 0 22px;
+      border-bottom: 1px solid #b5b5b5;
+      font-size: 18px;
+      font-weight: 600;
+      color: #b5b5b5;
+      line-height: 47px;
+      cursor: pointer;
+      transition: all .4s ease-in-out;
+    }
+    .custom-option:first-of-type {
+      border-radius: 4px 4px 0 0;
+    }
+    .custom-option:last-of-type {
+      border-bottom: 0;
+      border-radius: 0 0 4px 4px;
+    }
+
+    /*検索ボタンのフォント*/
+    .kensaku{
+      color: #fff;
+    }
+
+    /*おすすめスイーツの画像サイズ*/
+    .png_1 {
+      border-radius: 16px;
+      width: 50%;
+    }
+    .png_2 {
+      border-radius: 16px;
+      height: 40%;
+      width: 80%;
+    }
+    
+    
+
+    .kategori_1{
+      width: 30%;
+      height: 40%;
+    }

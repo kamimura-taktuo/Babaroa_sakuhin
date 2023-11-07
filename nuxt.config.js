@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'Babaroa_sakuhin',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'ja'
     },
     meta: [
       { charset: 'utf-8' },
@@ -15,12 +15,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {src:'~assets/js/main.js'},
+      {src:'~assets/js/main.js'}
     ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '@/assets/css/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -35,10 +38,9 @@ export default {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-  ],
-
+  modules: ['@nuxtjs/axios'],
+ 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-  }
+}
 }
