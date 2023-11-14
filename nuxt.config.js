@@ -30,8 +30,8 @@ export default {
       { rel: 'stylesheet' , href: 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&display=swap'},
     ],
     script: [
-      {src:'~assets/js/main.js'},
-      {src:'~assets/js/main.js'},
+      // {src:'~/assets/js/main.js'},
+      // {src:'~/assets/js/Video.js'},
       {src:'https://code.jquery.com/jquery-3.4.1.min.js',
       integrity:'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=',
       crossorigin:'anonymous'},
