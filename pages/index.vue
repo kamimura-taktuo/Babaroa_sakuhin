@@ -3,52 +3,52 @@
     <TheHeader />
 
     <div></div>
-<ul>
-    <li v-for="content in contents" :key="content.id">
-      <nuxt-link :to="`/${content.id}`">
-        {{ content.title }}
-      </nuxt-link>
-    </li>
-  </ul>
+    <ul>
+      <li v-for="content in contents" :key="content.id">
+        <nuxt-link :to="`/${content.id}`">
+          {{ content.title }}
+        </nuxt-link>
+      </li>
+    </ul>
+
+    <TheFooter />
+  </div>
 </template>
- 
+
 <script>
-import axios from 'axios'
+import axios from 'axios';
+
 export default {
   async asyncData() {
     const { data } = await axios.get(
-      // your-service-id部分は自分のサービスidに置き換えてください
-      'https://tqeyp08sct.microcms.io/api/v1/blog',
+      `https://test1024.microcms.io/api/v1/menu`,
       {
-        // your-api-key部分は自分のapi-keyに置き換えてください
-        headers: { 'X-MICROCMS-API-KEY': 'zGv5zVd3UZM28GwBgRXDtVva2jpx0AkyXnlo' }
+        headers: {
+          "X-MICROCMS-API-KEY": "Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi",
+        },
       }
-    )
-    return data
-  }
+    );
+    return data;
+  },
+  data() {
+    return {
+      example: "test",
+    };
+  },
+  head() {
+    return {
+      title: "Bavarois",
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: "My custom description",
+        },
+      ],
+    };
+  },
 }
- 
-  // data() {
-  //   return {
-  //     example: "test",
-  //   };
-  // },
-  // head() {
-  //   return {
-  //     title: "Bavarois",
-  //     meta: [
-  //       // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-  //       {
-  //         hid: "description",
-  //         name: "description",
-  //         content: "My custom description",
-  //       },
-  //     ],
-  //   };
-  // },
-  //};
-
- 
 </script>
 <script>
 // $(document).ready(function () {
@@ -76,5 +76,4 @@ export default {
 //     focusOnSelect: true,
 //   });
 // });
-
 </script>
