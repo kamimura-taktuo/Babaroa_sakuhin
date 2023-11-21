@@ -1,4 +1,7 @@
 
+export function hideElement(selector){
+  $(selector).hide()
+}
 
 //ロード画面
 

@@ -1,8 +1,143 @@
 <template>
+
+  
   <div>
     <TheHeader />
 
-    
+    <!-- <section class="container">
+    <div>
+      <div class="logoWrapper">
+        <logo />
+      </div>
+      <p><button @click="execHideElement('.logoWrapper')">Hide Logo</button></p>
+    </div>
+    </section> -->
+
+    <div id="splash">
+          <div id="splash_logo">
+            <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp" />
+          </div>
+        </div>
+ 
+        <div class="relative">
+          <div class="your-class">
+            <div>
+              <video id="video" class="video1"  autoplay loop muted playsinline>
+                <source
+                  :src="require('../assets/Video/動画①.mp4')"
+                  type="Video/mp4"
+                />
+              </video>
+            </div>
+            <div>
+              <video id="video" class="video1" autoplay loop muted playsinline>
+                <source
+                  :src="require('../assets/Video/cookie動画.mp4')"
+                  type="Video/mp4"
+                />
+              </video>
+            </div>
+            <div>
+              <video id="video" class="video1" autoplay loop muted playsinline>
+                <source
+                  :src="require('../assets/Video/sasikomi.mp4')"
+                  type="Video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+ 
+          <img class="absolute" src="../assets/img/logo.png" />
+          <div class="inner float">
+            <div class="logo">
+              <h1>
+                <a href="index.vue">
+                  <img
+                    src="../assets/img/logo.png"
+                    alt="rogo"
+                    width="65"
+                    height="65"
+                  />
+                </a>
+              </h1>
+            </div>
+          </div>
+        </div>
+
+    <div style="text-align: center; margin: auto;" >
+        <p class="title">~One step closer to fashion~</p>
+        <p class=p1>大人なスイーツレシピ</p>
+    </div>
+
+    <!--おすすめスイーツ-->
+        <p class ="p4">おすすめスイーツ</p>
+          <div class="slider-for">
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
+                    <div class="slide-item__text">
+                      <p class="p6">どら焼き</p>
+                      <p class="p6">製作時間　30分</p>
+                    </div>
+                </div>
+            </div>
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
+                    <div class="slide-item__text">
+                      <p class="p6">おはぎ</p>
+                      <p class="p6">製作時間　30分</p>
+                    </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></div>
+                  <div class="slide-item__text">
+                    <p class="p6">わらび餅</p>
+                    <p class="p6">製作時間　30分</p>
+                    <p class="p6">カロリー　500000kcal</p>
+                  </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
+                    <div class="slide-item__text">
+                      <p class="p6">アップルパイ</p>
+                      <p class="p6">製作時間　30分</p>
+                    </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
+                    <div class="slide-item__text">
+                      <p class="p6">カッサータ</p>
+                      <p class="p6">製作時間　30分</p>
+                    </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
+                    <div class="slide-item__text">
+                      <p class="p6">チーズタルト</p>
+                      <p class="p6">製作時間　30分</p>
+                    </div>
+              </div>
+            </div>
+            <div>
+              <div class="slide-item__wrapper2" style="display: flex;">
+                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
+                    <div class="slide-item__text">
+                      <p class="p6">抹茶カヌレ</p>
+                      <p class="p6">製作時間　30分</p>
+                    </div>
+              </div>
+            </div>
+        </div>
+
     <div></div>
     <ul>
       <li v-for="content in contents" :key="content.id">
@@ -14,10 +149,12 @@
     
     <TheFooter />
   </div>
+  
 </template>
 
 <script>
 import axios from 'axios'
+/*import Logo from '~/components/Logo.vue'*/
 
 export default {
   async asyncData() {
@@ -41,6 +178,18 @@ export default {
           }
         ]
       }
+  },
+  /*components:{
+    Logo
+  },*/
+  methods:{
+    execHideElement(selector){
+      if(process.browser){
+        const main = require('~/assets/js/main')
+
+        main.hideElement(selector)
+      }
     }
+  }
 }
 </script>

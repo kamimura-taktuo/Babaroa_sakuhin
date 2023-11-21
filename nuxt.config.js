@@ -1,4 +1,7 @@
-export default {
+const webpack = require("webpack")
+
+/*export default*/
+module.exports =  {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
 
@@ -11,7 +14,7 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'pkg.description' },
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
@@ -30,8 +33,8 @@ export default {
       { rel: 'stylesheet' , href: 'https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@1,300&display=swap'},
     ],
     script: [
-      {src:'~assets/js/main.js'},
-      {src:'~assets/js/main.js'},
+      // {src:'~assets/js/main.js'},
+      // {src:'~assets/js/Video.js'},
       {src:'https://code.jquery.com/jquery-3.4.1.min.js',
       integrity:'sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=',
       crossorigin:'anonymous'},
@@ -64,6 +67,12 @@ export default {
   modules: ['@nuxtjs/axios'],
  
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-}
+  build: {vendor: ["jquery", "bootstrap"],
+  plugins: [
+    new webpack.ProvidePlugin({
+      jQuery:'jquery',
+      $: 'jquery'
+    })
+  ],
+  }
 }
