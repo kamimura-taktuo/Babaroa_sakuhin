@@ -183,14 +183,6 @@ export default {
     slick,
   },
   data() {
-    return {
-      option: {
-        autoplay: true,
-        autoplaySpeed: 2000,
-        fade: true,
-        infinite: false,
-      },
-    }
   },
   async asyncData() {
     const { data } = await axios.get(
@@ -250,31 +242,4 @@ export default {
     }
   },
 }
-</script>
-<script>
-// $(document).ready(function () {
-//   $(".your-class").slick({
-//     autoplay: true,
-//     autoplaySpeed: 5000,
-//     fade: true,
-//   });
-
-//   $(".slider-for").slick({
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     arrows: false,
-//     fade: true,
-//     asNavFor: ".slider-nav",
-//   });
-//   $(".slider-nav").slick({
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     asNavFor: ".slider-for",
-//     dots: true,
-//     centerMode: true,
-//     focusOnSelect: true,
-//   });
-// });
 </script>
