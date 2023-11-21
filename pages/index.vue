@@ -26,7 +26,7 @@
         ddd
       </div>
     </slick> -->
-    <div id="splash">
+    <div id="splash" >
           <div id="splash_logo">
             <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp" />
           </div>
