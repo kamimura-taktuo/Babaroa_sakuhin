@@ -12,7 +12,20 @@
       <p><button @click="execHideElement('.logoWrapper')">Hide Logo</button></p>
     </div>
     </section> -->
-
+    <!-- <slick ref="slick" :options="option">
+      <div>
+        aaa
+      </div>
+      <div>
+        bbb
+      </div>
+      <div>
+        ccc
+      </div>
+      <div>
+        ddd
+      </div>
+    </slick> -->
     <div id="splash">
           <div id="splash_logo">
             <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp" />
@@ -20,11 +33,13 @@
         </div>
  
         <div class="relative">
-          <div class="your-class">
+          
+          <!-- <div class="your-class"> -->
+          <slick ref="slick" :options="option">
             <div>
               <video id="video" class="video1"  autoplay loop muted playsinline>
                 <source
-                  :src="require('../assets/Video/動画①.mp4')"
+                  src="/Video/動画①.mp4"
                   type="Video/mp4"
                 />
               </video>
@@ -32,7 +47,7 @@
             <div>
               <video id="video" class="video1" autoplay loop muted playsinline>
                 <source
-                  :src="require('../assets/Video/cookie動画.mp4')"
+                  src="/Video/cookie動画.mp4"
                   type="Video/mp4"
                 />
               </video>
@@ -49,7 +64,8 @@
                 />
               </video>
             </div>
-          </div>
+          </slick>
+        
  
           <img class="absolute" src="../assets/img/logo.png" />
           <div class="inner float">
@@ -159,8 +175,22 @@
 <script>
 import axios from 'axios'
 /*import Logo from '~/components/Logo.vue'*/
+import slick from 'vue-slick'
 
 export default {
+  components: {
+    slick,
+  },
+  data() {
+    return {
+      option: {
+        autoplay: true,
+        autoplaySpeed: 2000,
+        fade: true,
+        infinite: false,
+      },
+    }
+  },
   async asyncData() {
     const { data } = await axios.get(
       `https://test1024.microcms.io/api/v1/menu`,
@@ -198,9 +228,16 @@ export default {
   mounted() {
     // このページで動くスクリプト
     if(process.browser){
-      $(window).on('load',function(){
-        $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
-        $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+      $(function () {
+        $(window).on('load',function(){
+          $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+          $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+        });
+        // $('.your-class').slick({
+        //   fade: true,
+        //   autoplay: true,
+        //   autoplaySpeed: 3000,
+        // });
       });
     }
   },

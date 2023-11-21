@@ -64,30 +64,30 @@ nav {
 }
 
 /*テキストの設定*/
-p1 {
+.p1 {
     color: white;
     font-size: 2vw;
 }
 
-p2 {
+.p2 {
     color: white;
     font-size: 1.2vw;
 }
 
-p3 {
+.p3 {
   color: #fff;
   font-size: 1.5vw;
 }
 
-p4{
+.p4{
   color: #fff;
   font-size: 2.5vw;
 }
-p5{
+.p5{
   font-family: 'Cormorant', serif;
   font-size: 1.2vw;
 }
-p6{
+.p6{
   font-family: "Hannari";
   color: #fff;
   font-size: 2.5vw;
