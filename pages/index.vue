@@ -93,70 +93,71 @@
         <p class ="p4">おすすめスイーツ</p>
           <div class="slider-for">
             <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
-                    <div class="slide-item__text">
-                      <p class="p6">どら焼き</p>
-                      <p class="p6">製作時間　30分</p>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
+                        <div class="slide-item__text">
+                          <p class="p6">どら焼き</p>
+                          <p class="p6">製作時間　30分</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
-                    <div class="slide-item__text">
-                      <p class="p6">おはぎ</p>
-                      <p class="p6">製作時間　30分</p>
-                    </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></div>
-                  <div class="slide-item__text">
-                    <p class="p6">わらび餅</p>
-                    <p class="p6">製作時間　30分</p>
-                    <p class="p6">カロリー　500000kcal</p>
+                <div>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
+                        <div class="slide-item__text">
+                          <p class="p6">おはぎ</p>
+                          <p class="p6">製作時間　30分</p>
+                        </div>
                   </div>
-              </div>
+                </div>
+                <div>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></div>
+                      <div class="slide-item__text">
+                        <p class="p6">わらび餅</p>
+                        <p class="p6">製作時間　30分</p>
+                        <p class="p6">カロリー　500000kcal</p>
+                      </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
+                        <div class="slide-item__text">
+                          <p class="p6">アップルパイ</p>
+                          <p class="p6">製作時間　30分</p>
+                        </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
+                        <div class="slide-item__text">
+                          <p class="p6">カッサータ</p>
+                          <p class="p6">製作時間　30分</p>
+                        </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
+                        <div class="slide-item__text">
+                          <p class="p6">チーズタルト</p>
+                          <p class="p6">製作時間　30分</p>
+                        </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="slide-item__wrapper2" style="display: flex;">
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
+                        <div class="slide-item__text">
+                          <p class="p6">抹茶カヌレ</p>
+                          <p class="p6">製作時間　30分</p>
+                        </div>
+                  </div>
+                </div>
             </div>
-            <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
-                    <div class="slide-item__text">
-                      <p class="p6">アップルパイ</p>
-                      <p class="p6">製作時間　30分</p>
-                    </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
-                    <div class="slide-item__text">
-                      <p class="p6">カッサータ</p>
-                      <p class="p6">製作時間　30分</p>
-                    </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
-                    <div class="slide-item__text">
-                      <p class="p6">チーズタルト</p>
-                      <p class="p6">製作時間　30分</p>
-                    </div>
-              </div>
-            </div>
-            <div>
-              <div class="slide-item__wrapper2" style="display: flex;">
-                  <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
-                    <div class="slide-item__text">
-                      <p class="p6">抹茶カヌレ</p>
-                      <p class="p6">製作時間　30分</p>
-                    </div>
-              </div>
-            </div>
-        </div>
+          
 
     <div></div>
     <ul>
