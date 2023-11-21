@@ -1,4 +1,6 @@
 <template>
+
+  
   <div>
     <TheHeader />
 
@@ -13,10 +15,12 @@
 
     <TheFooter />
   </div>
+  
 </template>
 
 <script>
-import axios from 'axios';
+import axios from 'axios'
+/*import Logo from '~/components/Logo.vue'*/
 
 export default {
   async asyncData() {
@@ -36,18 +40,30 @@ export default {
     };
   },
   head() {
-    return {
-      title: "Bavarois",
-      meta: [
-        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: "description",
-          name: "description",
-          content: "My custom description",
-        },
-      ],
-    };
+      return {
+        title: 'Bavarois',
+        meta: [
+          // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+          {
+            hid: 'description',
+            name: 'description',
+            content: 'My custom description'
+          }
+        ]
+      }
   },
+  /*components:{
+    Logo
+  },*/
+  methods:{
+    execHideElement(selector){
+      if(process.browser){
+        const main = require('~/assets/js/main')
+
+        main.hideElement(selector)
+      }
+    }
+  }
 }
 </script>
 <script>
