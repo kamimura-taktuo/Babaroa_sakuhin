@@ -90,8 +90,6 @@ function loop()
 */
 
 
-
-
 $(document).ready(function(){
   $('.single-item').slick({
     setting: setting-value
