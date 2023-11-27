@@ -30,12 +30,12 @@
           <div id="splash_logo">
             <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp" />
           </div>
-        </div>
+    </div>
  
         <div class="relative">
           
           <!-- <div class="your-class"> -->
-          <slick ref="slick" :options="option">
+          <slick  :options="option">
             <div>
               <video id="video" class="video1"  autoplay loop muted playsinline>
                 <source
@@ -65,8 +65,9 @@
               </video>
             </div>
           </slick>
+        </div>
         
- 
+        <div>
           <img class="absolute" src="../assets/img/logo.png" />
           <div class="inner float">
             <div class="logo">
@@ -174,15 +175,23 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
 /*import Logo from '~/components/Logo.vue'*/
-import slick from 'vue-slick'
+import slick from 'vue-slick';
 
 export default {
   components: {
-    slick,
+    slick
   },
   data() {
+    return{
+      option:{
+        autoplay:true,
+        autoplaySpeed:2000,
+        fade: true,
+        infinite:false,
+      },
+    };
   },
   async asyncData() {
     const { data } = await axios.get(
@@ -194,11 +203,6 @@ export default {
       }
     );
     return data;
-  },
-  data() {
-    return {
-      example: "test",
-    };
   },
   head() {
       return {
