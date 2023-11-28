@@ -2,7 +2,7 @@
 
   
   <div>
-    <TheHeader />
+    <!-- <TheHeader /> -->
 
     <!-- <section class="container">
     <div>
@@ -72,7 +72,7 @@
           <div class="inner float">
             <div class="logo">
               <h1>
-                <a href="index.vue">
+                <a href="http://localhost:3000/">
                   <img
                     src="../assets/img/logo.png"
                     alt="rogo"
@@ -92,8 +92,8 @@
 
     <!--おすすめスイーツ-->
         <p class ="p4">おすすめスイーツ</p>
-          <div class="slider-for">
-            <div>
+          <slick :options="option2" class="slider-for" ref="sliderFor">
+              <div>
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
                         <div class="slide-item__text">
@@ -157,8 +157,20 @@
                         </div>
                   </div>
                 </div>
-            </div>
-          
+          </slick>
+        
+      <!-- <slick :options="option3"> -->
+        <slick :options="option3" class="slider-nav" ref="sliderNav">
+          <div><img class="png_2" src="@/assets/img/どら焼き画像.png"><p class="p6">どら焼き</p></div>
+          <div><img class="png_2" src="@/assets/img/おはぎ画像.png"><p class="p6">おはぎ</p></div>
+          <div><img class="png_2" src="@/assets/img/わらび餅.png"><p class="p6">わらび餅</p></div>
+          <div><img class="png_2" src="@/assets/img/アップルパイ.png"><p class="p6">アップルパイ</p></div>
+          <div><img class="png_2" src="@/assets/img/カッサータ.png"><p class="p6">カッサータ</p></div>
+          <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="p6">チーズタルト</p></div>
+          <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
+        </slick>
+      <!-- </slick> -->
+        
 
     <div></div>
     <ul>
@@ -191,6 +203,26 @@ export default {
         fade: true,
         infinite:false,
       },
+      option2:{
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        // asNavFor: this.$refs.sliderNav
+        asNavFor: '.slider-nav',
+      },
+      option3:{
+        autoplay: true,
+        autoplaySpeed: 2000,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        // asNavFor: this.$refs.sliderFor,
+        asNavFor: '.slider-for',
+        dots: true,
+        centerMode: true,
+        focusOnSelect: true
+
+      }
     };
   },
   async asyncData() {
