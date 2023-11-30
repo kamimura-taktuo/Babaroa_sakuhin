@@ -195,6 +195,7 @@
       <li v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/${content.id}`">
           {{ content.title }}
+          <img>
         </nuxt-link>
       </li>
     </ul>
