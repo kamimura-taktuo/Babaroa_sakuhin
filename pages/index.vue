@@ -105,20 +105,6 @@
         
         <div>
           <img class="absolute" src="../assets/img/logo.png" />
-          <div class="inner float">
-            <div class="logo">
-              <h1>
-                <a href="http://localhost:3000/">
-                  <img
-                    src="../assets/img/logo.png"
-                    alt="rogo"
-                    width="65"
-                    height="65"
-                  />
-                </a>
-              </h1>
-            </div>
-          </div>
         </div>
  
     <div style="text-align: center; margin: auto;" >
@@ -129,7 +115,7 @@
     <!--おすすめスイーツ-->
         <p class ="p4">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
-              <div>
+              <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
                         <div class="slide-item__text">
@@ -138,7 +124,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
                         <div class="slide-item__text">
@@ -147,7 +133,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></div>
                       <div class="slide-item__text">
@@ -157,7 +143,7 @@
                       </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
                         <div class="slide-item__text">
@@ -166,7 +152,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
                         <div class="slide-item__text">
@@ -175,7 +161,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
                         <div class="slide-item__text">
@@ -184,7 +170,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
                         <div class="slide-item__text">
