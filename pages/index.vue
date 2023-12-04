@@ -58,7 +58,7 @@
               <!--メニュー一覧-->
               <nav class="header-nav">
                 <ul class="header-nav-list">
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">カテゴリー</a></li>
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="http://localhost:3000/">カテゴリー</a></li>
                   <li class="header-nav-item"><a class="header-nav-item-link" href="#">オヌヌメ</a></li>
                   <li class="header-nav-item"><a class="header-nav-item-link" href="#">ニュース</a></li>
                   <li class="header-nav-item"><a class="header-nav-item-link" href="#">ブログ</a></li>
@@ -191,17 +191,40 @@
           <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="p6">チーズタルト</p></div>
           <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
         </slick>
+
+    <!--カテゴリーの表示-->
     <ul>
       <li v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/${content.id}`">
           {{ content.title }}
-          <img>
+          <img :src=content.eyecatch.url width="30%">
         </nuxt-link>
       </li>
     </ul>
 
 
+    <!--洋菓子・和菓子-->
+    <div>
+      <div id="cards">
+        <div class="card">
+          <div class="picture">
+            <a href="">
+              <img src="../assets/img/wagasi.png" />
+            </a>
+          </div>
+        </div>
+        <div class="card" id="card-center">
+          <div class="picture">
+            <a href="">
+              <img src="../assets/img/yougasi.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- footer -->
+    <div>
          <footer>
           <ul class="footer-menu">
            <li>home</li>
@@ -211,6 +234,7 @@
           </ul>
           <p>© All rights reserved by dmmwebcampmedia.</p>
         </footer>
+    </div>
 
     
   </div>
