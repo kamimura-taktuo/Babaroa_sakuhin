@@ -193,8 +193,8 @@
         </slick>
 
     <!--カテゴリーの表示-->
-    <ul>
-      <li v-for="content in contents" :key="content.id">
+    <ul id="cards">
+      <li class="card" v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/${content.id}`">
           {{ content.title }}
           <img :src=content.eyecatch.url width="30%">
@@ -222,6 +222,8 @@
         </div>
       </div>
     </div>
+
+
 
     <!-- footer -->
     <div>
