@@ -113,6 +113,7 @@
     </div>
  
     <!--おすすめスイーツ-->
+    <div class="osusume">
         <p class ="p4">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
               <div class="slider">
@@ -191,16 +192,20 @@
           <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="p6">チーズタルト</p></div>
           <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
         </slick>
+    </div>
 
     <!--カテゴリーの表示-->
-    <ul id="cards">
-      <li class="card" v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/${content.id}`">
-          {{ content.title }}
-          <img :src=content.eyecatch.url width="30%">
-        </nuxt-link>
-      </li>
-    </ul>
+    <div class="category_hyouji">
+      <p class="kategory">イチオシカテゴリー</p>
+      <ul class="category">
+        <li class="category_1" v-for="content in contents" :key="content.id">
+          <nuxt-link :to="`/${content.id}`">
+            <img :src=content.eyecatch.url width="40%"><br>
+            {{ content.title }}<br>
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
 
 
     <!--洋菓子・和菓子-->
@@ -223,6 +228,7 @@
       </div>
     </div>
 
+    <p class="p2">aaaaaaa</p>
 
 
     <!-- footer -->
@@ -285,7 +291,7 @@ export default {
   },
   async asyncData() {
     const { data } = await axios.get(
-      `https://test1024.microcms.io/api/v1/menu`,
+      `https://test1024.microcms.io/api/v1/menu?limit=20`,
       {
         headers: {
           "X-MICROCMS-API-KEY": "Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi",

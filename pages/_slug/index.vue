@@ -1,7 +1,7 @@
 <template>
   <main class="main">
     <h1 class="title">{{ title }}</h1>
-    <p class="publishedAt">{{ publishedAt }}</p>
+    <!-- <p class="publishedAt">{{ publishedAt }}</p> -->
     <div class="post" v-html="main"></div>
   </main>
 </template>
