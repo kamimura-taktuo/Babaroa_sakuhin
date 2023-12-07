@@ -1,8 +1,8 @@
 <template>
   <main class="main">
-    <h1 class="title">{{ title }}</h1>
+    <h1 class="title">{{ category_name }}</h1>
     <!-- <p class="publishedAt">{{ publishedAt }}</p> -->
-    <div class="post" v-html="main"></div>
+    <div class="post" v-html="category_select.main"></div>
   </main>
 </template>
 
