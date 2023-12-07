@@ -12,7 +12,7 @@ import axios from 'axios'
 export default {
   async asyncData({ params }) {
     const { data } = await axios.get(
-      `https://test1024.microcms.io/api/v1/menu/${params.slug}`,
+      `https://test1024.microcms.io/api/v1/categories/${params.slug}`,
       {
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' }
       }

@@ -194,20 +194,6 @@
         </slick>
     </div>
 
-    <!--カテゴリーの表示-->
-    <div class="category_hyouji">
-      <p class="kategory">イチオシカテゴリー</p>
-      <ul class="category">
-        <li class="category_1" v-for="content in contents" :key="content.id">
-          <nuxt-link :to="`/${content.id}`">
-            <img :src=content.eyecatch.url width="40%"><br>
-            {{ content.title }}<br>
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
-
-
     <!--洋菓子・和菓子-->
     <div>
       <div id="cards">
@@ -227,6 +213,22 @@
         </div>
       </div>
     </div>
+
+    <!--カテゴリーの表示-->
+    <div class="category_hyouji">
+      <p class="kategory">イチオシカテゴリー</p>
+      <ul class="category">
+        <li class="category_1" v-for="content in contents" :key="content.id">
+          <nuxt-link :to="`/${content.id}`">
+            <img :src=content.category_img.url width="40%"><br>
+            {{ content.category_name }}<br>
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+
+
+    
 
     <p class="p2">aaaaaaa</p>
 
@@ -291,7 +293,7 @@ export default {
   },
   async asyncData() {
     const { data } = await axios.get(
-      `https://test1024.microcms.io/api/v1/menu?limit=20`,
+      `https://test1024.microcms.io/api/v1/categories?limit=20`,
       {
         headers: {
           "X-MICROCMS-API-KEY": "Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi",
