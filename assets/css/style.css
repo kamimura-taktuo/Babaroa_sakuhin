@@ -488,11 +488,11 @@ opacity: 0;
       text-align: center;
     }
 
-    .category{
+    .category_1{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-    .category_1{
+    .category_2{
       text-align: center;
       font-family: 'Cormorant', serif;
       font-size: 100%;
@@ -508,4 +508,25 @@ opacity: 0;
     .category_1 img:hover{
       width: 45%;
       height: 55%;
+    }
+
+
+
+    /*レシピ一覧の配列*/
+    .recipe{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .recipe img{
+      width: 70%;
+      height: 20vh;
+    }
+
+    .recipe_hairetu{
+      text-align: center;
+      font-family: 'Cormorant', serif;
+      font-size: 100%;
+      font-weight: bold;
+      padding: 20px 0 20px 0;
     }
