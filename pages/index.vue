@@ -68,6 +68,10 @@
             </div>
           </header>
  
+
+        <div>
+          <img class="absolute" src="../assets/img/logo.png" />
+        
         <div class="relative">
           <!-- <div class="your-class"> -->
           <!--動画のslick再生-->
@@ -102,6 +106,7 @@
             </div>
           </slick>
         </div>
+      </div>
         
         <div>
           <img class="absolute" src="../assets/img/logo.png" />

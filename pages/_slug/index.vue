@@ -1,20 +1,25 @@
 <template>
-  <main class="main">
-    <h1 class="title">{{ category_name }}</h1>
-    <!-- <p class="publishedAt">{{ publishedAt }}</p> -->
-    <p class="category">{{ category && category.category_select }}</p>
-    <div class="post" v-html="body"></div>
-  </main>
+<div>
+  <ul class="recipe">
+    <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
+      <nuxt-link :to="`/${content.id}`">
+      <img :src=content.eyecatch.url width="40%"><br>
+        {{ content.title }}
+      </nuxt-link>
+    </li>
+  </ul>
+</div>
 </template>
 
 <script>
 import axios from 'axios'
-
 export default {
-  async asyncData({ params }) {
+  async asyncData() {
     const { data } = await axios.get(
-      `https://test1024.microcms.io/api/v1/categories/${params.slug}`,
+      // your-service-id部分は自分のサービスidに置き換えてください
+      'https://test1024.microcms.io/api/v1/menu',
       {
+        // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' }
       }
     )
