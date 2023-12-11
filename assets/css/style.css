@@ -517,11 +517,13 @@ opacity: 0;
     .recipe{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      height: 80px;
     }
 
     .recipe img{
-      width: 65%;
-      height: 25vh;
+      width: 60%;
+      height: 90%;
+      border-radius: 16px;
     }
 
     .recipe_hairetu{

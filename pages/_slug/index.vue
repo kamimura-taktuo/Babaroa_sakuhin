@@ -17,7 +17,7 @@ export default {
   async asyncData() {
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      'https://test1024.microcms.io/api/v1/menu',
+      'https://test1024.microcms.io/api/v1/menu?limit=20',
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' }
