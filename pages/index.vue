@@ -224,7 +224,7 @@
       <p class="kategory">イチオシカテゴリー</p>
       <ul class="category_1">
         <li class="category_2" v-for="content in contents" :key="content.id">
-          <nuxt-link :to="`/${content.id}`">
+          <nuxt-link :to="`category/${content.id}`">
             <img :src=content.category_img.url width="40%"><br>
             {{ content.category_name }}<br>
           </nuxt-link>
