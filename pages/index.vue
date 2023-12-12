@@ -1,10 +1,5 @@
 <template>
   <div>
-<<<<<<< HEAD
-    <!-- <TheHeader /> -->
-
-=======
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
     <!-- <section class="container">
     <div>
       <div class="logoWrapper">
@@ -28,13 +23,6 @@
         ddd
       </div>
     </slick> -->
-<<<<<<< HEAD
-    <div id="splash" >
-          <div id="splash_logo">
-            <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp" />
-          </div>
-    </div>
-=======
 
     <!--ロード画面のロゴ-->
         <div id="splash">
@@ -79,7 +67,6 @@
               </nav>
             </div>
           </header>
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
  
 
         <div>
@@ -87,10 +74,7 @@
         
         <div class="relative">
           <!-- <div class="your-class"> -->
-<<<<<<< HEAD
-=======
           <!--動画のslick再生-->
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
           <slick  :options="option">
             <div>
               <video id="video" class="video1"  autoplay loop muted playsinline>
@@ -121,27 +105,6 @@
               </video>
             </div>
           </slick>
-<<<<<<< HEAD
-        </div>
-        
-        <div>
-          <img class="absolute" src="../assets/img/logo.png" />
-          <div class="inner float">
-            <div class="logo">
-              <h1>
-                <a href="http://localhost:3000/">
-                  <img
-                    src="../assets/img/logo.png"
-                    alt="rogo"
-                    width="65"
-                    height="65"
-                  />
-                </a>
-              </h1>
-            </div>
-          </div>
-=======
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
         </div>
       </div>
         
@@ -158,11 +121,7 @@
     <div class="osusume">
         <p class ="p4">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
-<<<<<<< HEAD
-              <div>
-=======
               <div class="slider">
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
                         <div class="slide-item__text">
@@ -238,12 +197,7 @@
           <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="p6">チーズタルト</p></div>
           <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
         </slick>
-<<<<<<< HEAD
-      <!-- </slick> -->
-        
-=======
     </div>
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
 
     <!--洋菓子・和菓子-->
     <div>
@@ -313,14 +267,6 @@ export default {
   },
   data() {
     return{
-<<<<<<< HEAD
-      option:{
-        autoplay:true,
-        autoplaySpeed:2000,
-        fade: true,
-        infinite:false,
-      },
-=======
       option: {
         autoplay: true,
         autoplaySpeed: 2000,
@@ -329,7 +275,6 @@ export default {
         example: "test",
       },
       searchText: '',
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
       option2:{
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -348,14 +293,8 @@ export default {
         dots: true,
         centerMode: true,
         focusOnSelect: true
-<<<<<<< HEAD
-
-      }
-    };
-=======
       }
     }
->>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
   },
   async asyncData() {
     const { data } = await axios.get(
