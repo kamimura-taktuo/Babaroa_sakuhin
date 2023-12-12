@@ -15,9 +15,9 @@
 <ul class="recipe">
   <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
     <nuxt-link :to="`../recipe/${content.id}`">
-    {{content.title}}
     <img :src=content.eyecatch.url width="40%"><br>
       {{ content.category_name}}
+      {{content.title}}
     </nuxt-link>
   </li>
 </ul>
