@@ -481,9 +481,9 @@ opacity: 0;
       font-family: 'Cormorant', serif;
     }
     .main img{
-      border-radius: 32px;
-      height: 65vh;
-      width: 70%;
+      /*border-radius: 32px;
+      height: 100%;
+      width: 70%;*/
     }
     .post{
       text-align: center;
@@ -532,4 +532,30 @@ opacity: 0;
       font-size: 100%;
       font-weight: bold;
       padding: 30px 0 30px 0;
+    }
+
+    /*レシピの詳細ページの設定*/
+    /*写真の配置とテキストの並び*/
+    .calorie{
+      padding: 50px 0 50px 0;
+    }
+    .img_setting{
+      text-align: center;
+    }
+    .recipe_img{
+      border-radius: 32px;
+      height: 100%;
+      width: 70%;
+    }
+    .text_setting{
+      padding: 0 10% 0 10%;
+    }
+    .calorie_text{
+      font-size: 2.5vw;
+    }
+
+    /*材料テキストの配置*/
+    .material{
+      padding: 30px 50px 30px 50px;
+      font-size: 2vw;
     }
