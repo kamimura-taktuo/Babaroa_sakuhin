@@ -1,9 +1,10 @@
 <template>
-
-  
   <div>
+<<<<<<< HEAD
     <!-- <TheHeader /> -->
 
+=======
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
     <!-- <section class="container">
     <div>
       <div class="logoWrapper">
@@ -13,6 +14,7 @@
     </div>
     </section> -->
     <!-- <slick ref="slick" :options="option">
+
       <div>
         aaa
       </div>
@@ -26,15 +28,69 @@
         ddd
       </div>
     </slick> -->
+<<<<<<< HEAD
     <div id="splash" >
           <div id="splash_logo">
             <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp" />
           </div>
     </div>
+=======
+
+    <!--ロード画面のロゴ-->
+        <div id="splash">
+        <div id="splash_logo">
+              <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp">
+        </div>
+        </div>
+
+
+    <!--ヘッダー-->
+        <header class="header">
+          <div class="header-inner inner">
+            <div class="inner float">
+    <!--ヘッダー内のロゴ-->
+              <div class="logo">
+                <h1 class="header-title">
+                  <a href="http://localhost:3000/">
+                    <img
+                      src="../assets/img/logo.png"
+                      alt="rogo"
+                      width="65"
+                      height="65"
+                    />
+                  </a>
+                </h1>
+              </div>
+            </div>
+              <!--検索機能-->
+              <form id="form4" action="http://localhost:3000/" method="get">
+              <input id="sbox4" name="s" type="text" v-model="searchText" placeholder="フリーワードを入力" />
+              <button id="sbtn4" type="button" @click="searchRecipe">検索</button>
+              </form>
+              <!--メニュー一覧-->
+              <nav class="header-nav">
+                <ul class="header-nav-list">
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="http://localhost:3000/">カテゴリー</a></li>
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">オヌヌメ</a></li>
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">ニュース</a></li>
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">ブログ</a></li>
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">問い合わせ</a></li>
+                </ul>
+              </nav>
+            </div>
+          </header>
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
  
+
+        <div>
+          <img class="absolute" src="../assets/img/logo.png" />
+        
         <div class="relative">
-          
           <!-- <div class="your-class"> -->
+<<<<<<< HEAD
+=======
+          <!--動画のslick再生-->
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
           <slick  :options="option">
             <div>
               <video id="video" class="video1"  autoplay loop muted playsinline>
@@ -65,6 +121,7 @@
               </video>
             </div>
           </slick>
+<<<<<<< HEAD
         </div>
         
         <div>
@@ -83,17 +140,29 @@
               </h1>
             </div>
           </div>
+=======
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
         </div>
-
+      </div>
+        
+        <div>
+          <img class="absolute" src="../assets/img/logo.png" />
+        </div>
+ 
     <div style="text-align: center; margin: auto;" >
         <p class="title">~One step closer to fashion~</p>
         <p class=p1>大人なスイーツレシピ</p>
     </div>
-
+ 
     <!--おすすめスイーツ-->
+    <div class="osusume">
         <p class ="p4">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
+<<<<<<< HEAD
               <div>
+=======
+              <div class="slider">
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
                         <div class="slide-item__text">
@@ -102,7 +171,7 @@
                         </div>
                     </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
                         <div class="slide-item__text">
@@ -111,7 +180,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></div>
                       <div class="slide-item__text">
@@ -121,7 +190,7 @@
                       </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
                         <div class="slide-item__text">
@@ -130,7 +199,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
                         <div class="slide-item__text">
@@ -139,7 +208,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
                         <div class="slide-item__text">
@@ -148,7 +217,7 @@
                         </div>
                   </div>
                 </div>
-                <div>
+                <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
                         <div class="slide-item__text">
@@ -169,19 +238,66 @@
           <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="p6">チーズタルト</p></div>
           <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
         </slick>
+<<<<<<< HEAD
       <!-- </slick> -->
         
+=======
+    </div>
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
 
-    <div></div>
-    <ul>
-      <li v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`/${content.id}`">
-          {{ content.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <!--洋菓子・和菓子-->
+    <div>
+      <div id="cards">
+        <div class="card">
+          <div class="picture">
+            <a href="">
+              <img src="../assets/img/wagasi.png" />
+            </a>
+          </div>
+        </div>
+        <div class="card" id="card-center">
+          <div class="picture">
+            <a href="">
+              <img src="../assets/img/yougasi.png" />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
 
-    <TheFooter />
+    <!--カテゴリーの表示-->
+    <div class="category_hyouji">
+      <p class="kategory">イチオシカテゴリー</p>
+      <ul class="category_1">
+        <li class="category_2" v-for="content in contents" :key="content.id">
+          <nuxt-link :to="`/${content.id}`">
+            <img :src=content.category_img.url width="40%"><br>
+            {{ content.category_name }}<br>
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
+
+
+    
+
+    <p class="p2">aaaaaaa</p>
+
+
+    <!-- footer -->
+    <div>
+         <footer>
+          <ul class="footer-menu">
+           <li>home</li>
+           <li>about</li>
+           <li>service</li>
+           <li>Contact Us</li>
+          </ul>
+          <p>© All rights reserved by dmmwebcampmedia.</p>
+        </footer>
+    </div>
+
+    
   </div>
   
 </template>
@@ -197,12 +313,23 @@ export default {
   },
   data() {
     return{
+<<<<<<< HEAD
       option:{
         autoplay:true,
         autoplaySpeed:2000,
         fade: true,
         infinite:false,
       },
+=======
+      option: {
+        autoplay: true,
+        autoplaySpeed: 2000,
+        fade: true,
+        infinite: false,
+        example: "test",
+      },
+      searchText: '',
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
       option2:{
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -221,13 +348,18 @@ export default {
         dots: true,
         centerMode: true,
         focusOnSelect: true
+<<<<<<< HEAD
 
       }
     };
+=======
+      }
+    }
+>>>>>>> e80488ed66c20c10fb8586a5e988fdd2f0d7bf41
   },
   async asyncData() {
     const { data } = await axios.get(
-      `https://test1024.microcms.io/api/v1/menu`,
+      `https://test1024.microcms.io/api/v1/categories?limit=20`,
       {
         headers: {
           "X-MICROCMS-API-KEY": "Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi",
@@ -249,9 +381,7 @@ export default {
         ]
       }
   },
-  /*components:{
-    Logo
-  },*/
+
   methods:{
     execHideElement(selector){
       if(process.browser){
@@ -259,7 +389,11 @@ export default {
 
         main.hideElement(selector)
       }
-    }
+    },
+    searchRecipe() {
+      console.log(this.searchText)
+      // console.log(this.$params)
+    },
   },
   mounted() {
     // このページで動くスクリプト
