@@ -1,5 +1,6 @@
 <template>
 <div>
+  <!--左上のロゴの表示-->
   <div class="logo">
     <h1 class="header-title">
       <a href="http://localhost:3000/">

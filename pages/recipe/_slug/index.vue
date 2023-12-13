@@ -1,6 +1,21 @@
 <template>
+<!--左上のロゴの表示-->
+
   <main class="main">
-    <h1 class="title">{{ title }}</h1>
+    <div class="logo">
+    <h1 class="header-title">
+      <a href="http://localhost:3000/">
+        <img
+          src="@/assets/img/logo.png"
+          alt="rogo"
+          width="65"
+          height="65"
+        />
+      </a>
+    </h1>
+  </div>
+
+    <h1 class="recipe_title">{{ title }}</h1>
     <!--スイーツの画像とカロリーの並び-->
     <div class="calorie">
       <div  style="display: flex;">
@@ -20,6 +35,8 @@
         </nuxt-link>
       </li>
     </ul>
+
+    
 
 
 
@@ -41,4 +58,15 @@ export default {
     return data
   }
 }
+
+export const Main = ({ procedure }) => (
+  <main>
+    {procedure.map((item, i) =>
+      item.fieldId === 'procedure' ? (
+           // 画像 + テキスト表示用のコンポーネントを利用する
+        <Procedure key={i}  text={item.text} image={item.image} />
+      ) : null
+    )}
+  </main>
+);
 </script>
