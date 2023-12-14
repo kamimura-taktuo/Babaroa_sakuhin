@@ -141,7 +141,7 @@
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%; text-align: center;"><a href="http://localhost:3000/recipe/bf36imk134x"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></a></div>
                       <div class="slide-item__text">
                         <p class="p6">わらび餅</p>
                         <p class="p6">製作時間　30分</p>
@@ -204,14 +204,14 @@
       <div id="cards">
         <div class="card">
           <div class="picture">
-            <a href="">
+            <a href="http://localhost:3000/category/2oqnz88qr">
               <img src="../assets/img/wagasi.png" />
             </a>
           </div>
         </div>
         <div class="card" id="card-center">
           <div class="picture">
-            <a href="">
+            <a href="http://localhost:3000/category/r8t9nb4t3s">
               <img src="../assets/img/yougasi.png" />
             </a>
           </div>
@@ -298,7 +298,7 @@ export default {
   },
   async asyncData() {
     const { data } = await axios.get(
-      `https://test1024.microcms.io/api/v1/categories?limit=20`,
+      `https://test1024.microcms.io/api/v1/categories?limit=12`,
       {
         headers: {
           "X-MICROCMS-API-KEY": "Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi",
@@ -329,6 +329,7 @@ export default {
         main.hideElement(selector)
       }
     },
+    /*検索キーワードの取得*/ 
     searchRecipe() {
       console.log(this.searchText)
       // console.log(this.$params)

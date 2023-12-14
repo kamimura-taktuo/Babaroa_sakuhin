@@ -1,7 +1,6 @@
 <template>
-<!--左上のロゴの表示-->
-
   <main class="main">
+    <!--左上のロゴの表示-->
     <div class="logo">
     <h1 class="header-title">
       <a href="http://localhost:3000/">
@@ -26,6 +25,8 @@
       </div>
     </div>
 
+
+    <!--材料-->
     <div class="material" v-html="main"></div>
 
     <ul>
@@ -37,8 +38,6 @@
     </ul>
 
     
-
-
 
   </main>
 </template>
