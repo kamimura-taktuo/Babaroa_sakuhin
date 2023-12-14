@@ -51,9 +51,16 @@
               </div>
             </div>
               <!--検索機能-->
-              <form id="form4" action="http://localhost:3000/" method="get">
+              <!-- <form id="form4" action="http://localhost:3000/" method="get">
               <input id="sbox4" name="s" type="text" v-model="searchText" placeholder="フリーワードを入力" />
               <button id="sbtn4" type="button" @click="searchRecipe">検索</button>
+              </form> -->
+
+              <form id="form4" @submit.prevent="submit">
+                <input type="text" v-model="query" ref="searchForm">
+                  <button class="search-btn" type="submit">
+                    検索
+                  </button>
               </form>
               <!--メニュー一覧-->
               <nav class="header-nav">
@@ -293,8 +300,10 @@ export default {
         dots: true,
         centerMode: true,
         focusOnSelect: true
-      }
+      },
+      query: '',
     }
+    
   },
   async asyncData() {
     const { data } = await axios.get(
@@ -334,6 +343,20 @@ export default {
       console.log(this.searchText)
       // console.log(this.$params)
     },
+
+    submit() {
+      if (this.canSubmit) {
+        //検索が有効な場合に検索結果ページに遷移させる
+        this.$router.push({
+          path: '/search',
+          query: {
+            q: this.query
+          }
+        })
+        this.query = ''
+        this.$refs.searchForm.blur()
+      }
+    }
   },
   mounted() {
     // このページで動くスクリプト
@@ -351,5 +374,50 @@ export default {
       });
     }
   },
+
+  name: 'SearchForm',
+  computed: {
+    // 検索キーワードが有効な場合にtrueを返す
+    canSubmit() {
+      return !!this.query && // キーワードがないとだめ
+        !/^\s+$/.test(this.query) // 空白のみはだめ
+    }
+  },
 }
 </script>
+
+<style scoped>
+
+form{
+  margin-bottom: 3rem;
+}
+
+input[type=text] {
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  width: 245px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
+}
+
+input[type=text]:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+button {
+  z-index: 1;
+  height:38px;
+  width:50px;	
+  position:absolute; 
+  left:200px; 
+  top:0;
+  background:#7fbfff;
+  color:#ffffff;
+  border:none;
+  border-radius:0 25px 25px 0;
+}
+</style>

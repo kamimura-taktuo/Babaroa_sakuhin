@@ -13,6 +13,9 @@
       </a>
     </h1>
   </div>
+
+<h1 class="category_name">{{ title }}</h1>
+
 <ul class="recipe">
   <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
     <nuxt-link :to="`../recipe/${content.id}`">

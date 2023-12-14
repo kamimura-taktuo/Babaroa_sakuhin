@@ -79,7 +79,7 @@ body {background-color: rgb(0, 0, 0);}
 /*検索フォームの設定*/
 #form4{
   position:relative;
-  max-width:250px;	
+  max-width:400px;	
   margin: 0 0 0 50px;
   margin-top: 0px;
   }
@@ -525,7 +525,7 @@ opacity: 0;
     .recipe{
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
-      height: 80px;
+      height: 30vh;
     }
 
     .recipe img{
@@ -539,7 +539,7 @@ opacity: 0;
       font-family: 'Cormorant', serif;
       font-size: 100%;
       font-weight: bold;
-      padding: 30px 0 30px 0;
+      padding: 70px 10% 0px 10%;
     }
 
     /*レシピの詳細ページの設定*/
