@@ -33,10 +33,10 @@
 
 
     <!--ヘッダー-->
-        <header class="header">
+        <!-- <header class="header">
           <div class="header-inner inner">
             <div class="inner float">
-    <!--ヘッダー内のロゴ-->
+    ヘッダー内のロゴ
               <div class="logo">
                 <h1 class="header-title">
                   <a href="http://localhost:3000/">
@@ -50,11 +50,11 @@
                 </h1>
               </div>
             </div>
-              <!--検索機能-->
-              <!-- <form id="form4" action="http://localhost:3000/" method="get">
+              検索機能
+              <form id="form4" action="http://localhost:3000/" method="get">
               <input id="sbox4" name="s" type="text" v-model="searchText" placeholder="フリーワードを入力" />
               <button id="sbtn4" type="button" @click="searchRecipe">検索</button>
-              </form> -->
+              </form>
 
               <form id="form4" @submit.prevent="submit">
                 <input type="text" v-model="query" ref="searchForm">
@@ -62,7 +62,7 @@
                     検索
                   </button>
               </form>
-              <!--メニュー一覧-->
+              メニュー一覧
               <nav class="header-nav">
                 <ul class="header-nav-list">
                   <li class="header-nav-item"><a class="header-nav-item-link" href="http://localhost:3000/">カテゴリー</a></li>
@@ -73,47 +73,87 @@
                 </ul>
               </nav>
             </div>
-          </header>
+          </header> -->
+
+      <header class="header">
+        <div class="navtext-container">
+          <form id="form4" @submit.prevent="submit">
+                <input type="text" v-model="query" ref="searchForm">
+                  <button class="search-btn" type="submit">
+                    検索
+                  </button>
+        </form>
+        </div>
+        <div class="logo">
+                <h1 class="header-title">
+                  <a href="http://localhost:3000/">
+                    <img
+                      src="../assets/img/logo.png"
+                      alt="rogo"
+                      width="65"
+                      height="65"
+                    />
+                  </a>
+                </h1>
+              </div>
+          <input type="checkbox" class="menu-btn" id="menu-btn">
+          <label for="menu-btn" class="menu-icon">
+            <span class="navicon">
+              
+            </span>
+          </label>
+
+          
+          <ul class="menu">
+            <li class="top"><a href="#home">home</a></li>
+            <li><a href="#skills">skills</a></li>
+            <li><a href="#projects">projects</a></li>
+            <li><a href="#contact">contact</a></li>
+          </ul>
+
+      </header>
+
+
  
 
         <div>
           <img class="absolute" src="../assets/img/logo.png" />
         
-        <div class="relative">
-          <!-- <div class="your-class"> -->
-          <!--動画のslick再生-->
-          <slick  :options="option">
-            <div>
-              <video id="video" class="video1"  autoplay loop muted playsinline>
-                <source
-                  src="/Video/動画①.mp4"
-                  type="Video/mp4"
-                />
-              </video>
+            <div class="relative">
+              <!-- <div class="your-class"> -->
+              <!--動画のslick再生-->
+              <slick  :options="option">
+                <div>
+                  <video id="video" class="video1"  autoplay loop muted playsinline>
+                    <source
+                      src="/Video/動画①.mp4"
+                      type="Video/mp4"
+                    />
+                  </video>
+                </div>
+                <div>
+                  <video id="video" class="video1" autoplay loop muted playsinline>
+                    <source
+                      src="/Video/cookie動画.mp4"
+                      type="Video/mp4"
+                    />
+                  </video>
+                </div>
+                <div>
+                  <video id="video" class="video1" autoplay loop muted playsinline>
+                    <!-- <source
+                      :src="require('../assets/Video/sasikomi.mp4')"
+                      type="Video/mp4"
+                    /> -->
+                    <source
+                      src="/sasikomi.mp4"
+                      type="Video/mp4"
+                    />
+                  </video>
+                </div>
+              </slick>
             </div>
-            <div>
-              <video id="video" class="video1" autoplay loop muted playsinline>
-                <source
-                  src="/Video/cookie動画.mp4"
-                  type="Video/mp4"
-                />
-              </video>
-            </div>
-            <div>
-              <video id="video" class="video1" autoplay loop muted playsinline>
-                <!-- <source
-                  :src="require('../assets/Video/sasikomi.mp4')"
-                  type="Video/mp4"
-                /> -->
-                <source
-                  src="/sasikomi.mp4"
-                  type="Video/mp4"
-                />
-              </video>
-            </div>
-          </slick>
         </div>
-      </div>
         
         <div>
           <img class="absolute" src="../assets/img/logo.png" />
@@ -133,7 +173,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">どら焼き</p>
-                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">製作時間　30分</p><br>
+                          <a href="">レシピはこちら！！</a>
                         </div>
                     </div>
                 </div>
@@ -142,7 +183,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">おはぎ</p>
-                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">製作時間　30分</p><br>
+                          <a href="">レシピはこちら！！</a>
                         </div>
                   </div>
                 </div>
@@ -152,7 +194,8 @@
                       <div class="slide-item__text">
                         <p class="p6">わらび餅</p>
                         <p class="p6">製作時間　30分</p>
-                        <p class="p6">カロリー　500000kcal</p>
+                        <p class="p6">カロリー　500000kcal</p><br>
+                        <a href="">レシピはこちら！！</a>
                       </div>
                   </div>
                 </div>
@@ -161,7 +204,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">アップルパイ</p>
-                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">製作時間　30分</p><br>
+                          <a href="">レシピはこちら！！</a>
                         </div>
                   </div>
                 </div>
@@ -170,7 +214,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">カッサータ</p>
-                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">製作時間　30分</p><br>
+                          <a href="">レシピはこちら！！</a>
                         </div>
                   </div>
                 </div>
@@ -179,7 +224,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">チーズタルト</p>
-                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">製作時間　30分</p><br>
+                          <a href="">レシピはこちら！！</a>
                         </div>
                   </div>
                 </div>
@@ -188,7 +234,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">抹茶カヌレ</p>
-                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">製作時間　30分</p><br>
+                          <a href="">レシピはこちら！！</a>
                         </div>
                   </div>
                 </div>
@@ -211,14 +258,14 @@
       <div id="cards">
         <div class="card">
           <div class="picture">
-            <a href="http://localhost:3000/category/2oqnz88qr">
+            <a href="http://localhost:3000/category/r8t9nb4t3s">
               <img src="../assets/img/wagasi.png" />
             </a>
           </div>
         </div>
         <div class="card" id="card-center">
           <div class="picture">
-            <a href="http://localhost:3000/category/r8t9nb4t3s">
+            <a href="http://localhost:3000/category/2oqnz88qr">
               <img src="../assets/img/yougasi.png" />
             </a>
           </div>
@@ -240,9 +287,6 @@
     </div>
 
 
-    
-
-    <p class="p2">aaaaaaa</p>
 
 
     <!-- footer -->
@@ -305,7 +349,8 @@ export default {
     }
     
   },
-  async asyncData() {
+  async asyncData({ params }) {
+    
     const { data } = await axios.get(
       `https://test1024.microcms.io/api/v1/categories?limit=12`,
       {
@@ -410,7 +455,7 @@ input[type=text]:focus {
 
 button {
   z-index: 1;
-  height:38px;
+  height:39px;
   width:50px;	
   position:absolute; 
   left:200px; 
