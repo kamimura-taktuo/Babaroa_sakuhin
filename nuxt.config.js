@@ -74,5 +74,65 @@ module.exports =  {
       $: 'jquery'
     })
   ],
-  }
+  },
+
+  router: {
+    extendRoutes(routes, resolve) {
+      routes.push({
+        path: '/category/{content.id}/:p',
+        component: resolve(__dirname, 'pages/category/_slug/index.vue'),
+        name: 'page',
+      });
+      routes.push({
+        path: '/category/:categoryId/page/:p',
+        component: resolve(__dirname, 'pages/category/_slug/index.vue'),
+        name: 'category',
+      })
+    },
+  },
+
+  generate: {
+    async routes() {
+      const limit = 10
+      const range = (start, end) =>
+        [...Array(end - start + 1)].map((_, i) => start + i)
+
+      // 一覧のページング
+      const pages = await axios
+        .get(`https://test1024.microcms.io/api/v1/menu?limit=0`, {
+          headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
+        })
+          .then((res) =>
+            range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
+              route: `/category/{content.id}/${p}`,
+            }))
+          )
+
+      const categories = await axios
+        .get(`https://test1024.microcms.io/api/v1/categories?fields=id`, {
+          headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
+        })
+          .then(({ data }) => {
+            return data.contents.map((content) => content.id)
+          });
+
+      // カテゴリーページのページング
+      const categoryPages = await Promise.all(
+        categories.map((category) =>
+          axios.get(
+            `https://test1024.microcms.io/api/v1/menu?limit=0&filters=category[equals]${category}`,
+            { headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' } }
+          )
+            .then((res) =>
+              range(1, Math.ceil(res.data.totalCount / 10)).map((p) => ({
+                route: `/category/${category}/page/${p}`,
+              })))
+      )
+      )
+
+      // 2次元配列になってるのでフラットにする
+      const flattenCategoryPages = [].concat.apply([], categoryPages)
+      return [...pages, ...flattenCategoryPages]
+    },
+  },
 }

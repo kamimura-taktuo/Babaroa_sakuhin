@@ -25,6 +25,15 @@
       </li>
     </ul>
   </div>
+
+  <div>
+    // 略
+    <Pagination
+    :pager="pager"
+    :current="Number(page)"
+    :category="selectedCategory"
+    />
+  </div>
 </div>
 
 
@@ -34,15 +43,38 @@
 import axios from 'axios'
 export default {
   async asyncData({params}) {
-    console.log(params.slug)
+    const page = params.p || '1'
+    const categoryId = params.categoryId
+    const limit = 10
+    // console.log(params.slug)
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      `https://test1024.microcms.io/api/v1/menu?filters=category[contains]${params.slug}&limit=30`,
+      `https://test1024.microcms.io/api/v1/menu?filters=category[contains]${params.slug}&limit=${limit}${
+        categoryId === undefined ? '' : `&filters=category[equals]${categoryId}`
+      }&offset=${(page - 1) * limit}`,
       {
         // your-api-key部分は自分のapi-keyに置き換えてください
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' }
       }
-    )
+    );
+
+    const categories = await axios.get(
+      `https://test1024.microcms.io/api/v1/categories?limit=100`,
+      {
+        headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
+      }
+    );
+    const selectedCategory =
+      categoryId !== undefined
+        ? categories.data.contents.find((content) => content.id === categoryId)
+        : undefined;
+
+    return {
+      ...data,
+      selectedCategory,
+      page,
+      pager: [...Array(Math.ceil(data.totalCount / limit)).keys()],
+    };
     return data
   }
   
