@@ -258,14 +258,14 @@
       <div id="cards">
         <div class="card">
           <div class="picture">
-            <a href="http://localhost:3000/category/r8t9nb4t3s">
+            <a href="http://localhost:3000/category/r8t9nb4t3s/page/1">
               <img src="../assets/img/wagasi.png" />
             </a>
           </div>
         </div>
         <div class="card" id="card-center">
           <div class="picture">
-            <a href="http://localhost:3000/category/2oqnz88qr">
+            <a href="http://localhost:3000/category/2oqnz88qr/page/1">
               <img src="../assets/img/yougasi.png" />
             </a>
           </div>
@@ -278,7 +278,7 @@
       <p class="kategory">イチオシカテゴリー</p>
       <ul class="category_1">
         <li class="category_2" v-for="content in contents" :key="content.id">
-          <nuxt-link :to="`category/${content.id}`">
+          <nuxt-link :to="`category/${content.id}/page/1`">
             <img :src=content.category_img.url width="40%"><br>
             {{ content.category_name }}<br>
           </nuxt-link>
