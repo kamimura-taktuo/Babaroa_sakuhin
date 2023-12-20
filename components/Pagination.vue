@@ -64,7 +64,7 @@ export default {
     getPath(p) {
       return `/${
         this.category !== undefined ? `category/${this.category.id}/` : ''
-      }category/${category.id}/${p}`;
+      }page/${p}`;
     },
   },
 };

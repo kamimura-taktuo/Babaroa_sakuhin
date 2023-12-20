@@ -79,7 +79,7 @@ module.exports =  {
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        path: '/category/{content.id}/:p',
+        path: '/page/:p',
         component: resolve(__dirname, 'pages/category/_slug/index.vue'),
         name: 'page',
       });
@@ -104,7 +104,7 @@ module.exports =  {
         })
           .then((res) =>
             range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
-              route: `/category/{content.id}/${p}`,
+              route: `/page/${p}`,
             }))
           )
 
