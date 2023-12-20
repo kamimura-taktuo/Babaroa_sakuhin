@@ -46,10 +46,10 @@ export default {
     const page = params.p || '1'
     const categoryId = params.categoryId
     const limit = 10
-    // console.log(params.slug)
+    console.log(params.slug)
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      `https://test1024.microcms.io/api/v1/menu?filters=category[contains]${params.slug}&limit=${limit}${
+      `https://test1024.microcms.io/api/v1/menu?limit=${limit}${
         categoryId === undefined ? '' : `&filters=category[contains]${categoryId}`
       }&offset=${(page - 1) * limit}`,
       {
