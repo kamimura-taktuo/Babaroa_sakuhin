@@ -45,7 +45,7 @@ export default {
   async asyncData({params}) {
     const page = params.p || '1'
     const categoryId = params.categoryId
-    console.log()
+    console.log(params.categoryId)
     const limit = 10
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
