@@ -79,11 +79,6 @@ module.exports =  {
   router: {
     extendRoutes(routes, resolve) {
       routes.push({
-        path: '/page/:p',
-        component: resolve(__dirname, 'pages/category/_slug/index.vue'),
-        name: 'page',
-      });
-      routes.push({
         path: '/category/:categoryId/page/:p',
         component: resolve(__dirname, 'pages/category/_slug/index.vue'),
         name: 'category',
@@ -104,12 +99,12 @@ module.exports =  {
         })
           .then((res) =>
             range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
-              route: `/page/${p}`,
+              route: `category/${content.id}/page/${p}`,
             }))
           )
 
-      const categories = await axios
-        .get(`https://test1024.microcms.io/api/v1/categories?fields=id`, {
+      const menu = await axios
+        .get(`https://test1024.microcms.io/api/v1/menu?fields=id`, {
           headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
         })
           .then(({ data }) => {
@@ -118,7 +113,7 @@ module.exports =  {
 
       // カテゴリーページのページング
       const categoryPages = await Promise.all(
-        categories.map((category) =>
+        menu.map((category) =>
           axios.get(
             `https://test1024.microcms.io/api/v1/menu?limit=0&filters=category[equals]${category}`,
             { headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' } }

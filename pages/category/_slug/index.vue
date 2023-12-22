@@ -45,8 +45,8 @@ export default {
   async asyncData({params}) {
     const page = params.p || '1'
     const categoryId = params.categoryId
+    console.log()
     const limit = 10
-    console.log(params.slug)
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
       `https://test1024.microcms.io/api/v1/menu?limit=${limit}${
@@ -58,15 +58,15 @@ export default {
       }
     );
 
-    const categories = await axios.get(
-      `https://test1024.microcms.io/api/v1/categories?limit=100`,
+    const menu = await axios.get(
+      `https://test1024.microcms.io/api/v1/menu?limit=100`,
       {
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
       }
     );
     const selectedCategory =
       categoryId !== undefined
-        ? categories.data.contents.find((content) => content.id === categoryId)
+        ? menu.data.contents.find((content) => content.id === categoryId)
         : undefined;
 
     return {

@@ -62,9 +62,10 @@ export default {
   },
   methods: {
     getPath(p) {
+        const contentId = "aaa"
       return `/${
         this.category !== undefined ? `category/${this.category.id}/` : ''
-      }page/${p}`;
+      }category/${contentId}/page/${p}`;
     },
   },
 };
