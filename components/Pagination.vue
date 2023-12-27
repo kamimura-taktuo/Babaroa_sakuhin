@@ -3,7 +3,7 @@
     <ul class="pager">
       <li v-if="current > 1" class="page arrow">
         <nuxt-link :to="getPath(current - 1)">
-          <img src="/images/icon_arrow_left.svg" alt="前のページへ" />
+          <img src="../assets/img/yajirusi_2.png" alt="前のページへ" width="20px"/>
         </nuxt-link>
       </li>
       <li v-if="3 < current" class="page">
@@ -35,7 +35,7 @@
       </li>
       <li v-if="current < pager.length" class="page arrow">
         <nuxt-link :to="getPath(current + 1)">
-          <img src="/images/icon_arrow_right.svg" alt="次のページへ" />
+          <img src="../assets/img/yajirusi.png" alt="次のページへ" width="20px"/>
         </nuxt-link>
       </li>
     </ul>
@@ -64,7 +64,7 @@ export default {
     getPath(p) {
       return `/${
         this.category !== undefined ? `category/${this.category.id}/` : ''
-      }category/:categoryId/page/${p}`;
+      }category/2oqnz88qr/page/${p}`;
     },
   },
 };

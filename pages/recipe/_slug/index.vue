@@ -29,10 +29,14 @@
     <!--材料-->
     <div class="material" v-html="main"></div>
 
+    
+    <!--タグ-->
+    <p>タグ</p>
     <ul>
       <li v-for="contents in tags" :key="contents.id">
         <nuxt-link :to="`../tag/${contents.id}`">
-          {{ contents.tags_name}}
+        <img src="@/assets/img/tagu_Picture.png" width="1%">
+          {{ contents.tags_name }}
         </nuxt-link>
       </li>
     </ul>
