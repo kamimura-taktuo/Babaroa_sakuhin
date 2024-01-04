@@ -1,3 +1,4 @@
+
 <template>
   <main class="main">
     <!--左上のロゴの表示-->
@@ -29,13 +30,15 @@
     <!--材料-->
     <div class="material" v-html="main"></div>
 
+    <!--手順-->
+
     
     <!--タグ-->
     <p>タグ</p>
-    <ul>
-      <li v-for="contents in tags" :key="contents.id">
+    <ul class="tags_hairetu_1">
+      <li v-for="contents in tags" :key="contents.id" class="tags_hairetu_2">
         <nuxt-link :to="`../tag/${contents.id}`">
-        <img src="@/assets/img/tagu_Picture.png" width="1%">
+        <img src="@/assets/img/tagu_Picture.png" width="5%">
           {{ contents.tags_name }}
         </nuxt-link>
       </li>

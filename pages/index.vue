@@ -104,11 +104,10 @@
           </label>
 
           
-          <ul class="menu">
-            <li class="top"><a href="#home">おすすめ</a></li>
-            <li><a href="#skills">カテゴリー</a></li>
-            <li><a href="#projects">タグ</a></li>
-            <li><a href="#contact">問い合わせ</a></li>
+          <ul class="menu" id="page-link">
+            <li><a href="#area-1">おすすめ</a></li>
+            <li><a href="#area-2">カテゴリー</a></li>
+            <li><a href="#area-3">問い合わせ</a></li>
           </ul>
 
       </header>
@@ -165,8 +164,9 @@
     </div>
  
     <!--おすすめスイーツ-->
+    <section class="area" id="area-1">
     <div class="osusume">
-        <p class ="p4">おすすめスイーツ</p>
+        <p class ="p1">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
               <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
@@ -258,8 +258,11 @@
           <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
         </slick>
     </div>
+    </section>
 
     <!--洋菓子・和菓子-->
+    <section class="area" id="area-2">
+      <p class="p1">カテゴリー</p>
     <div>
       <div id="cards">
         <div class="card">
@@ -281,7 +284,7 @@
 
     <!--カテゴリーの表示-->
     <div class="category_hyouji">
-      <p class="kategory">イチオシカテゴリー</p>
+      <p class="p1">イチオシカテゴリー</p>
       <ul class="category_1">
         <li class="category_2" v-for="content in contents" :key="content.id">
           <nuxt-link :to="`category/${content.id}/page/1`">
@@ -291,8 +294,10 @@
         </li>
       </ul>
     </div>
+    </section>
 
   <!--問い合わせフォーム-->
+  <section class="area" id="area-3">
   <section id="contact">
   
   <h1 class="section-header">Contact</h1>
@@ -320,7 +325,7 @@
       </div>
       
       <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-        <img src="@/assets/img/sousinn_buttom.png" style="width: 30%; height: 100%;">
+        <img src="@/assets/img/sousinn_buttom.png" style="width: 60px; height: 100%;">
         <div class="alt-send-button">
           <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
         </div>
@@ -331,7 +336,8 @@
     
   </div>
   
-</section>
+  </section>
+  </section>
 
 
     <!-- footer -->
@@ -346,6 +352,7 @@
 
           <ul class="social-media-list">
           <li><a href="#" target="_blank" class="contact-icon">
+            <!-- <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;"> -->
             <i class="fa fa-github" aria-hidden="true"></i></a>
           </li>
           <li><a href="#" target="_blank" class="contact-icon">
@@ -355,7 +362,8 @@
             <i class="fa fa-twitter" aria-hidden="true"></i></a>
           </li>
           <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <i class="fab fa-line"></i>
+            </a>
           </li>       
         </ul>
           <p>© All rights reserved by dmmwebcampmedia.</p>
@@ -478,6 +486,20 @@ export default {
         // });
       });
     }
+
+    $('#page-link a[href*="#"]').click(function () {
+      var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+      var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+      $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+      return false;
+    });
+
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.target.elements.name.value = '';
+      e.target.elements.email.value = '';
+      e.target.elements.message.value = '';
+    });
   },
 
   name: 'SearchForm',
