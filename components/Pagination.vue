@@ -55,16 +55,14 @@ export default {
       required: true,
     },
     category: {
-      type: Object,
+      type: String,
       required: false,
       default: undefined,
     },
   },
   methods: {
     getPath(p) {
-      return `/${
-        this.category !== undefined ? `category/${this.category.id}/` : ''
-      }category/2oqnz88qr/page/${p}`;
+      return `/category/${this.category}/page/${p}`;
     },
   },
 };

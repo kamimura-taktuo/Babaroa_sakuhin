@@ -31,7 +31,7 @@
     <Pagination
     :pager="pager"
     :current="Number(page)"
-    :category="selectedCategory"
+    :category="categoryId"
     />
   </div>
 </div>
@@ -71,7 +71,8 @@ export default {
 
     return {
       ...data,
-      selectedCategory,
+      // selectedCategory,
+      categoryId,
       page,
       pager: [...Array(Math.ceil(data.totalCount / limit)).keys()],
     };
