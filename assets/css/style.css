@@ -615,7 +615,7 @@ opacity: 0;
 
     /*材料テキストの配置*/
     .material{
-      padding: 30px 50px 30px 50px;
+      padding: 30px 120px 30px 120px;
       font-size: 2vw;
     }
 
@@ -1014,7 +1014,9 @@ opacity: 0;
     }
 
     .tags_hairetu_1{
-      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 5% 10%;
     }
 
     .tags_hairetu_2{
@@ -1024,6 +1026,7 @@ opacity: 0;
     .container{
       position: relative;
       width: 50%;
+      height: 100%;
       margin: auto;
     }
 
@@ -1039,6 +1042,6 @@ opacity: 0;
       padding:0;
       margin:0;
       right: 5px;
-      bottom: 10%;
+      bottom: 12%;
     }
     
