@@ -3,7 +3,7 @@
   <!--左上のロゴの表示-->
   <div class="logo">
     <h1 class="header-title">
-      <a href="http://localhost:3000/">
+      <a href="/">
         <img
           src="@/assets/img/logo.png"
           alt="rogo"
@@ -21,7 +21,7 @@
         <nuxt-link :to="`/recipe/${content.id}`" class="container">
         <img :src=content.eyecatch.url>
         <div class="Time_recipe">
-          {{content.time}}
+          <p class="Time_cook">{{content.time}}</p>
         </div><br>
           {{content.title}}
         </nuxt-link>

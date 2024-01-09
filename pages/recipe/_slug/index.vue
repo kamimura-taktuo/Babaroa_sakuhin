@@ -4,7 +4,7 @@
     <!--左上のロゴの表示-->
     <div class="logo">
     <h1 class="header-title">
-      <a href="http://localhost:3000/">
+      <a href="/">
         <img
           src="@/assets/img/logo.png"
           alt="rogo"

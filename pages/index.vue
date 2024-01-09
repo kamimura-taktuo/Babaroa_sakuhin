@@ -39,7 +39,7 @@
     ヘッダー内のロゴ
               <div class="logo">
                 <h1 class="header-title">
-                  <a href="http://localhost:3000/">
+                  <a href="/">
                     <img
                       src="../assets/img/logo.png"
                       alt="rogo"
@@ -51,7 +51,7 @@
               </div>
             </div>
               検索機能
-              <form id="form4" action="http://localhost:3000/" method="get">
+              <form id="form4" action="/" method="get">
               <input id="sbox4" name="s" type="text" v-model="searchText" placeholder="フリーワードを入力" />
               <button id="sbtn4" type="button" @click="searchRecipe">検索</button>
               </form>
@@ -65,7 +65,7 @@
               メニュー一覧
               <nav class="header-nav">
                 <ul class="header-nav-list">
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="http://localhost:3000/">カテゴリー</a></li>
+                  <li class="header-nav-item"><a class="header-nav-item-link" href="/">カテゴリー</a></li>
                   <li class="header-nav-item"><a class="header-nav-item-link" href="#">オヌヌメ</a></li>
                   <li class="header-nav-item"><a class="header-nav-item-link" href="#">ニュース</a></li>
                   <li class="header-nav-item"><a class="header-nav-item-link" href="#">ブログ</a></li>
@@ -86,7 +86,7 @@
         </div>
         <div class="logo">
                 <h1 class="header-title">
-                  <a href="http://localhost:3000/">
+                  <a href="/">
                     <img
                       src="../assets/img/logo.png"
                       alt="rogo"
@@ -170,78 +170,78 @@
           <slick :options="option2" class="slider-for" ref="sliderFor">
               <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="http://localhost:3000/recipe/t_c6b-tvw4"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/t_c6b-tvw4"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">どら焼き</p>
                           <p class="p6">製作時間　30分</p>
                           <p class="p6">カロリー　500000kcal</p><br>
-                          <a href="http://localhost:3000/recipe/t_c6b-tvw4"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                          <a href="/recipe/t_c6b-tvw4"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                     </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="http://localhost:3000/recipe/0f1jwlvszx"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/0f1jwlvszx"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">おはぎ</p>
                           <p class="p6">製作時間　30分</p>
                           <p class="p6">カロリー　500000kcal</p><br>
-                          <a href="http://localhost:3000/recipe/0f1jwlvszx"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                          <a href="/recipe/0f1jwlvszx"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%; text-align: center;"><a href="http://localhost:3000/recipe/bf36imk134x"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%; text-align: center;"><a href="/recipe/bf36imk134x"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></a></div>
                       <div class="slide-item__text">
                         <p class="p6">わらび餅</p>
                         <p class="p6">製作時間　30分</p>
                         <p class="p6">カロリー　500000kcal</p><br>
-                        <a href="http://localhost:3000/recipe/bf36imk134x"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                        <a href="/recipe/bf36imk134x"><img src="../assets/img/こちらから.png" class="kotira"></a>
                       </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="http://localhost:3000/recipe/wtmwzn68w"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/wtmwzn68w"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">アップルパイ</p>
                           <p class="p6">製作時間　30分</p>
                           <p class="p6">カロリー　500000kcal</p><br>
-                          <a href="http://localhost:3000/recipe/wtmwzn68w"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                          <a href="/recipe/wtmwzn68w"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="http://localhost:3000/recipe/geb_65syw"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/geb_65syw"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">カッサータ</p>
                           <p class="p6">製作時間　30分</p>
                           <p class="p6">カロリー　500000kcal</p><br>
-                          <a href="http://localhost:3000/recipe/geb_65syw"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                          <a href="/recipe/geb_65syw"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="http://localhost:3000/recipe/b60yrfq2n1"></a><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/b60yrfq2n1"></a><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">チーズタルト</p>
                           <p class="p6">製作時間　30分</p>
                           <p class="p6">カロリー　500000kcal</p><br>
-                          <a href="http://localhost:3000/recipe/b60yrfq2n1"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                          <a href="/recipe/b60yrfq2n1"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="http://localhost:3000/recipe/5eaytaast"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/5eaytaast"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">抹茶カヌレ</p>
                           <p class="p6">製作時間　30分</p>
                           <p class="p6">カロリー　500000kcal</p><br>
-                          <a href="http://localhost:3000/recipe/5eaytaast"><img src="../assets/img/こちらから.png" class="kotira"></a>
+                          <a href="/recipe/5eaytaast"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
@@ -267,14 +267,14 @@
       <div id="cards">
         <div class="card">
           <div class="picture">
-            <a href="http://localhost:3000/category/r8t9nb4t3s/page/1">
+            <a href="/category/r8t9nb4t3s/page/1">
               <img src="../assets/img/wagasi.png" />
             </a>
           </div>
         </div>
         <div class="card" id="card-center">
           <div class="picture">
-            <a href="http://localhost:3000/category/2oqnz88qr/page/1">
+            <a href="/category/2oqnz88qr/page/1">
               <img src="../assets/img/yougasi.png" />
             </a>
           </div>

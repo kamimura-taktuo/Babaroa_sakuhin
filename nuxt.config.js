@@ -1,4 +1,5 @@
 const webpack = require("webpack")
+import axios from 'axios'
 
 /*export default*/
 module.exports =  {
@@ -93,15 +94,15 @@ module.exports =  {
         [...Array(end - start + 1)].map((_, i) => start + i)
 
       // 一覧のページング
-      const pages = await axios
-        .get(`https://test1024.microcms.io/api/v1/menu?limit=0`, {
-          headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
-        })
-          .then((res) =>
-            range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
-              route: `category/${content.id}/page/${p}`,
-            }))
-          )
+      // const pages = await axios
+      //   .get(`https://test1024.microcms.io/api/v1/menu?limit=0`, {
+      //     headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
+      //   })
+      //     .then((res) =>
+      //       range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
+      //         route: `/category/:categoryId/page/${p}`,
+      //       }))
+      //     )
 
       const menu = await axios
         .get(`https://test1024.microcms.io/api/v1/menu?fields=id`, {
@@ -127,7 +128,8 @@ module.exports =  {
 
       // 2次元配列になってるのでフラットにする
       const flattenCategoryPages = [].concat.apply([], categoryPages)
-      return [...pages, ...flattenCategoryPages]
+      // return [...pages, ...flattenCategoryPages]
+      return [...flattenCategoryPages]
     },
   },
 }
