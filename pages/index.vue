@@ -76,6 +76,15 @@
           </header> -->
 
       <header class="header">
+        <!-- <div>
+          読み込み
+          <search-form/>
+                <article v-for="post in posts" :key="post.id" style="margin-bottom:30px;" class="article">
+                    ...省略
+                </article>
+            <index-pager :numPages="numPages" :current="current">
+            </index-pager>
+        </div> -->
         <div class="navtext-container">
           <form id="form4" @submit.prevent="submit">
                 <input type="text" v-model="query" ref="searchForm" class="kennsaku_text">
