@@ -1,79 +1,12 @@
+
 <template>
   <div>
-    <!-- <section class="container">
-    <div>
-      <div class="logoWrapper">
-        <logo />
-      </div>
-      <p><button @click="execHideElement('.logoWrapper')">Hide Logo</button></p>
-    </div>
-    </section> -->
-    <!-- <slick ref="slick" :options="option">
-
-      <div>
-        aaa
-      </div>
-      <div>
-        bbb
-      </div>
-      <div>
-        ccc
-      </div>
-      <div>
-        ddd
-      </div>
-    </slick> -->
-
     <!--ロード画面のロゴ-->
         <div id="splash">
         <div id="splash_logo">
               <img src="../assets/img/logo.png" alt="ロゴ" class="fadeUp">
         </div>
         </div>
-
-
-    <!--ヘッダー-->
-        <!-- <header class="header">
-          <div class="header-inner inner">
-            <div class="inner float">
-    ヘッダー内のロゴ
-              <div class="logo">
-                <h1 class="header-title">
-                  <a href="/">
-                    <img
-                      src="../assets/img/logo.png"
-                      alt="rogo"
-                      width="65"
-                      height="65"
-                    />
-                  </a>
-                </h1>
-              </div>
-            </div>
-              検索機能
-              <form id="form4" action="/" method="get">
-              <input id="sbox4" name="s" type="text" v-model="searchText" placeholder="フリーワードを入力" />
-              <button id="sbtn4" type="button" @click="searchRecipe">検索</button>
-              </form>
-
-              <form id="form4" @submit.prevent="submit">
-                <input type="text" v-model="query" ref="searchForm">
-                  <button class="search-btn" type="submit">
-                    検索
-                  </button>
-              </form>
-              メニュー一覧
-              <nav class="header-nav">
-                <ul class="header-nav-list">
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="/">カテゴリー</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">オヌヌメ</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">ニュース</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">ブログ</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">問い合わせ</a></li>
-                </ul>
-              </nav>
-            </div>
-          </header> -->
 
       <header class="header">
         <!-- <div>
@@ -120,9 +53,6 @@
           </ul>
 
       </header>
-
-
- 
 
         <div>
           <img class="absolute" src="../assets/img/logo.png" />
@@ -175,15 +105,15 @@
     <!--おすすめスイーツ-->
     <section class="area" id="area-1">
     <div class="osusume">
-        <p class ="p1">おすすめスイーツ</p>
+        <p class ="p1_midasi">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
               <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
                       <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/t_c6b-tvw4"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">どら焼き</p>
-                          <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　500000kcal</p><br>
+                          <p class="p6">製作時間　約50分</p>
+                          <p class="p6">カロリー　354kcal</p><br>
                           <a href="/recipe/t_c6b-tvw4"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                     </div>
@@ -194,7 +124,7 @@
                         <div class="slide-item__text">
                           <p class="p6">おはぎ</p>
                           <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　500000kcal</p><br>
+                          <p class="p6">カロリー　332kcal</p><br>
                           <a href="/recipe/0f1jwlvszx"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -205,7 +135,7 @@
                       <div class="slide-item__text">
                         <p class="p6">わらび餅</p>
                         <p class="p6">製作時間　30分</p>
-                        <p class="p6">カロリー　500000kcal</p><br>
+                        <p class="p6">カロリー　280kcal</p><br>
                         <a href="/recipe/bf36imk134x"><img src="../assets/img/こちらから.png" class="kotira"></a>
                       </div>
                   </div>
@@ -227,7 +157,7 @@
                         <div class="slide-item__text">
                           <p class="p6">カッサータ</p>
                           <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　500000kcal</p><br>
+                          <p class="p6">カロリー　245kcal</p><br>
                           <a href="/recipe/geb_65syw"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -237,8 +167,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/b60yrfq2n1"></a><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">チーズタルト</p>
-                          <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　500000kcal</p><br>
+                          <p class="p6">製作時間　60分</p>
+                          <p class="p6">カロリー　274kcal</p><br>
                           <a href="/recipe/b60yrfq2n1"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -248,8 +178,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/5eaytaast"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">抹茶カヌレ</p>
-                          <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　500000kcal</p><br>
+                          <p class="p6">製作時間　1日</p>
+                          <p class="p6">カロリー　208kcal</p><br>
                           <a href="/recipe/5eaytaast"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -271,7 +201,7 @@
 
     <!--洋菓子・和菓子-->
     <section class="area" id="area-2">
-      <p class="p1">カテゴリー</p>
+      <p class="p1_midasi">カテゴリー</p>
     <div>
       <div id="cards">
         <div class="card">
@@ -293,7 +223,7 @@
 
     <!--カテゴリーの表示-->
     <div class="category_hyouji">
-      <p class="p1">イチオシカテゴリー</p>
+      <p class="p1_midasi">イチオシカテゴリー</p>
       <ul class="category_1">
         <li class="category_2" v-for="content in contents" :key="content.id">
           <nuxt-link :to="`category/${content.id}/page/1`">

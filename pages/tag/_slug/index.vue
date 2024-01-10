@@ -13,15 +13,29 @@
       </a>
     </h1>
   </div>
-<ul class="recipe">
+
+<div>
+    <ul class="recipe">
+      <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
+        <nuxt-link :to="`/recipe/${content.id}`" class="container">
+        <img :src=content.eyecatch.url>
+        <div class="Time_recipe">
+          <p class="Time_cook">{{content.time}}</p>
+        </div><br>
+          {{content.title}}
+        </nuxt-link>
+      </li>
+    </ul>
+  </div>
+<!-- <ul class="recipe">
   <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
     <nuxt-link :to="`../recipe/${content.id}`">
-    <img :src=content.eyecatch.url width="40%"><br>
+    <img :src=content.eyecatch.url width="20%"><br>
       {{ content.tags_name}}
       {{content.title}}
     </nuxt-link>
   </li>
-</ul>
+</ul> -->
 </div>
 </template>
 

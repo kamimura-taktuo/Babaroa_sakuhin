@@ -135,7 +135,7 @@ body {background-color: rgb(0, 0, 0);}
     font-weight: bold;
     /*margin-top: 300px;*/
     font-size: 8vw;
-    padding: 40px 20px 40px 20px;
+    padding: 5% 20px 5% 20px;
 }
 
 /*テキストの設定*/
@@ -163,7 +163,14 @@ body {background-color: rgb(0, 0, 0);}
     color: white;
     font-size: 3.5vw;
     font-family: "myfont", sans-serif;
-    padding: 50px;
+    padding: 3% 20%;
+}
+
+.p1_midasi{
+    color: white;
+    font-size: 3.5vw;
+    font-family: "myfont", sans-serif;
+    padding: 0 2%;
 }
 
 .p2 {
@@ -513,7 +520,7 @@ opacity: 0;
 
     /*おすすめスイーツ*/
     .osusume{
-      padding: 60px 0 60px 0;
+      padding: 10% 0;
     }
     /*画像のスライドのパディング*/
     .slider{
@@ -572,7 +579,7 @@ opacity: 0;
     }
 
     .recipe img{
-      width: 110%;
+      width: 100%;
       height: 100%;
       border-radius: 16px;
     }
@@ -599,6 +606,7 @@ opacity: 0;
     }
     .recipe_img{
       border-radius: 32px;
+      width: 70%;
       /* height: 100%;
       width: 70%; */
       object-fit: cover;
@@ -622,8 +630,12 @@ opacity: 0;
 
     /*材料テキストの配置*/
     .material{
-      padding: 30px 120px 30px 120px;
-      font-size: 2vw;
+      padding: 0 10%;
+      font-size: 3vw;
+    }
+
+    .material_tag{
+      padding: 10% 0;
     }
 
     
@@ -1020,14 +1032,22 @@ opacity: 0;
       }
     }
 
+    .midasi{
+      padding: 0 7%;
+      font-size: 5vw;
+      
+    }
+
     .tags_hairetu_1{
-      display: grid;
+      padding: 0 10%;
+      /* display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      padding: 5% 10%;
+      padding: 5% 10%; */
     }
 
     .tags_hairetu_2{
       list-style: none;
+      font-size: 3vw;
     }
 
     .container{

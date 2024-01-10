@@ -1,5 +1,6 @@
 
 <template>
+
   <main class="main">
     <!--左上のロゴの表示-->
     <div class="logo">
@@ -28,13 +29,16 @@
 
 
     <!--材料-->
+    <div class="material_tag">
+    <p class="midasi">材料</p>
     <div class="material" v-html="main"></div>
+    </div>
 
     <!--手順-->
 
     
     <!--タグ-->
-    <p>タグ</p>
+    <p class="midasi">タグ</p>
     <ul class="tags_hairetu_1">
       <li v-for="contents in tags" :key="contents.id" class="tags_hairetu_2">
         <nuxt-link :to="`../tag/${contents.id}`">
@@ -43,6 +47,18 @@
         </nuxt-link>
       </li>
     </ul>
+
+  <!--手順-->
+  <!-- export const Main = ({ repeat }) => (
+    <main>
+      {repeat.map((item, i) =>
+        item.fieldId === 'procedure' ? (
+            // 画像 + テキスト表示用のコンポーネントを利用する
+          <repeat key={i}  text={item.body} image={item.img} />
+        ) : null
+      )}
+    </main>
+  ); -->
 
     
 
@@ -65,12 +81,12 @@ export default {
   }
 }
 
-export const Main = ({ procedure }) => (
+export const Main = ({ repeat }) => (
   <main>
-    {procedure.map((item, i) =>
+    {repeat.map((item, i) =>
       item.fieldId === 'procedure' ? (
            // 画像 + テキスト表示用のコンポーネントを利用する
-        <Procedure key={i}  text={item.text} image={item.image} />
+        <repeat key={i}  text={item.body} image={item.img} />
       ) : null
     )}
   </main>
