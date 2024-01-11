@@ -1,4 +1,5 @@
 const webpack = require("webpack")
+import axios from 'axios'
 
 /*export default*/
 module.exports =  {
@@ -64,7 +65,11 @@ module.exports =  {
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxtjs/axios'],
+  modules: ['@nuxtjs/axios','@nuxtjs/proxy'],
+
+  proxy: {
+    '/.netlify': 'http://localhost:3000'
+  },
  
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {vendor: ["jquery", "bootstrap"],
@@ -78,11 +83,6 @@ module.exports =  {
 
   router: {
     extendRoutes(routes, resolve) {
-      routes.push({
-        path: '/page/:p',
-        component: resolve(__dirname, 'pages/category/_slug/index.vue'),
-        name: 'page',
-      });
       routes.push({
         path: '/category/:categoryId/page/:p',
         component: resolve(__dirname, 'pages/category/_slug/index.vue'),
@@ -98,18 +98,18 @@ module.exports =  {
         [...Array(end - start + 1)].map((_, i) => start + i)
 
       // 一覧のページング
-      const pages = await axios
-        .get(`https://test1024.microcms.io/api/v1/menu?limit=0`, {
-          headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
-        })
-          .then((res) =>
-            range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
-              route: `/page/${p}`,
-            }))
-          )
+      // const pages = await axios
+      //   .get(`https://test1024.microcms.io/api/v1/menu?limit=0`, {
+      //     headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
+      //   })
+      //     .then((res) =>
+      //       range(1, Math.ceil(res.data.totalCount / limit)).map((p) => ({
+      //         route: `/category/:categoryId/page/${p}`,
+      //       }))
+      //     )
 
-      const categories = await axios
-        .get(`https://test1024.microcms.io/api/v1/categories?fields=id`, {
+      const menu = await axios
+        .get(`https://test1024.microcms.io/api/v1/menu?fields=id`, {
           headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
         })
           .then(({ data }) => {
@@ -118,7 +118,7 @@ module.exports =  {
 
       // カテゴリーページのページング
       const categoryPages = await Promise.all(
-        categories.map((category) =>
+        menu.map((category) =>
           axios.get(
             `https://test1024.microcms.io/api/v1/menu?limit=0&filters=category[equals]${category}`,
             { headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' } }
@@ -132,7 +132,8 @@ module.exports =  {
 
       // 2次元配列になってるのでフラットにする
       const flattenCategoryPages = [].concat.apply([], categoryPages)
-      return [...pages, ...flattenCategoryPages]
+      // return [...pages, ...flattenCategoryPages]
+      return [...flattenCategoryPages]
     },
   },
 }

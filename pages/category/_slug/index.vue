@@ -3,7 +3,7 @@
   <!--左上のロゴの表示-->
   <div class="logo">
     <h1 class="header-title">
-      <a href="http://localhost:3000/">
+      <a href="/">
         <img
           src="@/assets/img/logo.png"
           alt="rogo"
@@ -18,8 +18,11 @@
   <div>
     <ul class="recipe">
       <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
-        <nuxt-link :to="`../recipe/${content.id}`">
-        <img :src=content.eyecatch.url width="100%"><br>
+        <nuxt-link :to="`/recipe/${content.id}`" class="container">
+        <img :src=content.eyecatch.url>
+        <div class="Time_recipe">
+          <p class="Time_cook">{{content.time}}</p>
+        </div><br>
           {{content.title}}
         </nuxt-link>
       </li>
@@ -31,7 +34,7 @@
     <Pagination
     :pager="pager"
     :current="Number(page)"
-    :category="selectedCategory"
+    :category="categoryId"
     />
   </div>
 </div>
@@ -45,11 +48,11 @@ export default {
   async asyncData({params}) {
     const page = params.p || '1'
     const categoryId = params.categoryId
+    console.log(params.categoryId)
     const limit = 10
-    // console.log(params.slug)
     const { data } = await axios.get(
       // your-service-id部分は自分のサービスidに置き換えてください
-      `https://test1024.microcms.io/api/v1/menu?filters=category[contains]${params.slug}&limit=${limit}${
+      `https://test1024.microcms.io/api/v1/menu?limit=${limit}${
         categoryId === undefined ? '' : `&filters=category[contains]${categoryId}`
       }&offset=${(page - 1) * limit}`,
       {
@@ -58,20 +61,21 @@ export default {
       }
     );
 
-    const categories = await axios.get(
-      `https://test1024.microcms.io/api/v1/categories?limit=100`,
+    const menu = await axios.get(
+      `https://test1024.microcms.io/api/v1/menu?limit=100`,
       {
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' },
       }
     );
     const selectedCategory =
       categoryId !== undefined
-        ? categories.data.contents.find((content) => content.id === categoryId)
+        ? menu.data.contents.find((content) => content.id === categoryId)
         : undefined;
 
     return {
       ...data,
-      selectedCategory,
+      // selectedCategory,
+      categoryId,
       page,
       pager: [...Array(Math.ceil(data.totalCount / limit)).keys()],
     };

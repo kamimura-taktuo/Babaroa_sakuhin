@@ -1,9 +1,11 @@
+
 <template>
+
   <main class="main">
     <!--左上のロゴの表示-->
     <div class="logo">
     <h1 class="header-title">
-      <a href="http://localhost:3000/">
+      <a href="/">
         <img
           src="@/assets/img/logo.png"
           alt="rogo"
@@ -27,15 +29,36 @@
 
 
     <!--材料-->
+    <div class="material_tag">
+    <p class="midasi">材料</p>
     <div class="material" v-html="main"></div>
+    </div>
 
-    <ul>
-      <li v-for="contents in tags" :key="contents.id">
+    <!--手順-->
+
+    
+    <!--タグ-->
+    <p class="midasi">タグ</p>
+    <ul class="tags_hairetu_1">
+      <li v-for="contents in tags" :key="contents.id" class="tags_hairetu_2">
         <nuxt-link :to="`../tag/${contents.id}`">
-          {{ contents.tags_name}}
+        <img src="@/assets/img/tagu_Picture.png" width="5%">
+          {{ contents.tags_name }}
         </nuxt-link>
       </li>
     </ul>
+
+  <!--手順-->
+  <!-- export const Main = ({ repeat }) => (
+    <main>
+      {repeat.map((item, i) =>
+        item.fieldId === 'procedure' ? (
+            // 画像 + テキスト表示用のコンポーネントを利用する
+          <repeat key={i}  text={item.body} image={item.img} />
+        ) : null
+      )}
+    </main>
+  ); -->
 
     
 
@@ -58,12 +81,12 @@ export default {
   }
 }
 
-export const Main = ({ procedure }) => (
+export const Main = ({ repeat }) => (
   <main>
-    {procedure.map((item, i) =>
+    {repeat.map((item, i) =>
       item.fieldId === 'procedure' ? (
            // 画像 + テキスト表示用のコンポーネントを利用する
-        <Procedure key={i}  text={item.text} image={item.image} />
+        <repeat key={i}  text={item.body} image={item.img} />
       ) : null
     )}
   </main>

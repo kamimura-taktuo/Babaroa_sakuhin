@@ -1,29 +1,6 @@
+
 <template>
   <div>
-    <!-- <section class="container">
-    <div>
-      <div class="logoWrapper">
-        <logo />
-      </div>
-      <p><button @click="execHideElement('.logoWrapper')">Hide Logo</button></p>
-    </div>
-    </section> -->
-    <!-- <slick ref="slick" :options="option">
-
-      <div>
-        aaa
-      </div>
-      <div>
-        bbb
-      </div>
-      <div>
-        ccc
-      </div>
-      <div>
-        ddd
-      </div>
-    </slick> -->
-
     <!--ロード画面のロゴ-->
         <div id="splash">
         <div id="splash_logo">
@@ -31,54 +8,19 @@
         </div>
         </div>
 
-
-    <!--ヘッダー-->
-        <!-- <header class="header">
-          <div class="header-inner inner">
-            <div class="inner float">
-    ヘッダー内のロゴ
-              <div class="logo">
-                <h1 class="header-title">
-                  <a href="http://localhost:3000/">
-                    <img
-                      src="../assets/img/logo.png"
-                      alt="rogo"
-                      width="65"
-                      height="65"
-                    />
-                  </a>
-                </h1>
-              </div>
-            </div>
-              検索機能
-              <form id="form4" action="http://localhost:3000/" method="get">
-              <input id="sbox4" name="s" type="text" v-model="searchText" placeholder="フリーワードを入力" />
-              <button id="sbtn4" type="button" @click="searchRecipe">検索</button>
-              </form>
-
-              <form id="form4" @submit.prevent="submit">
-                <input type="text" v-model="query" ref="searchForm">
-                  <button class="search-btn" type="submit">
-                    検索
-                  </button>
-              </form>
-              メニュー一覧
-              <nav class="header-nav">
-                <ul class="header-nav-list">
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="http://localhost:3000/">カテゴリー</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">オヌヌメ</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">ニュース</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">ブログ</a></li>
-                  <li class="header-nav-item"><a class="header-nav-item-link" href="#">問い合わせ</a></li>
-                </ul>
-              </nav>
-            </div>
-          </header> -->
-
       <header class="header">
+        <!-- <div>
+          読み込み
+          <search-form/>
+                <article v-for="post in posts" :key="post.id" style="margin-bottom:30px;" class="article">
+                    ...省略
+                </article>
+            <index-pager :numPages="numPages" :current="current">
+            </index-pager>
+        </div> -->
         <div class="navtext-container">
           <form id="form4" @submit.prevent="submit">
-                <input type="text" v-model="query" ref="searchForm">
+                <input type="text" v-model="query" ref="searchForm" class="kennsaku_text">
                   <button class="search-btn" type="submit">
                     検索
                   </button>
@@ -86,7 +28,7 @@
         </div>
         <div class="logo">
                 <h1 class="header-title">
-                  <a href="http://localhost:3000/">
+                  <a href="/">
                     <img
                       src="../assets/img/logo.png"
                       alt="rogo"
@@ -104,17 +46,13 @@
           </label>
 
           
-          <ul class="menu">
-            <li class="top"><a href="#home">home</a></li>
-            <li><a href="#skills">skills</a></li>
-            <li><a href="#projects">projects</a></li>
-            <li><a href="#contact">contact</a></li>
+          <ul class="menu" id="page-link">
+            <li><a href="#area-1">おすすめ</a></li>
+            <li><a href="#area-2">カテゴリー</a></li>
+            <li><a href="#area-3">問い合わせ</a></li>
           </ul>
 
       </header>
-
-
- 
 
         <div>
           <img class="absolute" src="../assets/img/logo.png" />
@@ -165,77 +103,84 @@
     </div>
  
     <!--おすすめスイーツ-->
+    <section class="area" id="area-1">
     <div class="osusume">
-        <p class ="p4">おすすめスイーツ</p>
+        <p class ="p1_midasi">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
               <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/t_c6b-tvw4"><img style="width: 75%;"  class="png_1" src="../assets/img/どら焼き画像.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">どら焼き</p>
-                          <p class="p6">製作時間　30分</p><br>
-                          <a href="">レシピはこちら！！</a>
+                          <p class="p6">製作時間　約50分</p>
+                          <p class="p6">カロリー　354kcal</p><br>
+                          <a href="/recipe/t_c6b-tvw4"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                     </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/0f1jwlvszx"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">おはぎ</p>
-                          <p class="p6">製作時間　30分</p><br>
-                          <a href="">レシピはこちら！！</a>
+                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">カロリー　332kcal</p><br>
+                          <a href="/recipe/0f1jwlvszx"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%; text-align: center;"><a href="http://localhost:3000/recipe/bf36imk134x"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></a></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%; text-align: center;"><a href="/recipe/bf36imk134x"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></a></div>
                       <div class="slide-item__text">
                         <p class="p6">わらび餅</p>
                         <p class="p6">製作時間　30分</p>
-                        <p class="p6">カロリー　500000kcal</p><br>
-                        <a href="">レシピはこちら！！</a>
+                        <p class="p6">カロリー　280kcal</p><br>
+                        <a href="/recipe/bf36imk134x"><img src="../assets/img/こちらから.png" class="kotira"></a>
                       </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/wtmwzn68w"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">アップルパイ</p>
-                          <p class="p6">製作時間　30分</p><br>
-                          <a href="">レシピはこちら！！</a>
+                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">カロリー　500000kcal</p><br>
+                          <a href="/recipe/wtmwzn68w"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/geb_65syw"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">カッサータ</p>
-                          <p class="p6">製作時間　30分</p><br>
-                          <a href="">レシピはこちら！！</a>
+                          <p class="p6">製作時間　30分</p>
+                          <p class="p6">カロリー　245kcal</p><br>
+                          <a href="/recipe/geb_65syw"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/b60yrfq2n1"></a><img style="width: 75%;" class="png_1" src="@/assets/img/チーズタルト.png"></div>
                         <div class="slide-item__text">
                           <p class="p6">チーズタルト</p>
-                          <p class="p6">製作時間　30分</p><br>
-                          <a href="">レシピはこちら！！</a>
+                          <p class="p6">製作時間　60分</p>
+                          <p class="p6">カロリー　274kcal</p><br>
+                          <a href="/recipe/b60yrfq2n1"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
                 <div class="slider">
                   <div class="slide-item__wrapper2" style="display: flex;">
-                      <div class="slide-item__img" style="flex: 0 0 50%;"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></div>
+                      <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/5eaytaast"><img style="width: 75%;" class="png_1" src="@/assets/img/抹茶カヌレ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">抹茶カヌレ</p>
-                          <p class="p6">製作時間　30分</p><br>
-                          <a href="">レシピはこちら！！</a>
+                          <p class="p6">製作時間　1日</p>
+                          <p class="p6">カロリー　208kcal</p><br>
+                          <a href="/recipe/5eaytaast"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
                 </div>
@@ -252,20 +197,23 @@
           <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
         </slick>
     </div>
+    </section>
 
     <!--洋菓子・和菓子-->
+    <section class="area" id="area-2">
+      <p class="p1_midasi">カテゴリー</p>
     <div>
       <div id="cards">
         <div class="card">
           <div class="picture">
-            <a href="http://localhost:3000/category/r8t9nb4t3s/page/1">
+            <a href="/category/r8t9nb4t3s/page/1">
               <img src="../assets/img/wagasi.png" />
             </a>
           </div>
         </div>
         <div class="card" id="card-center">
           <div class="picture">
-            <a href="http://localhost:3000/category/2oqnz88qr/page/1">
+            <a href="/category/2oqnz88qr/page/1">
               <img src="../assets/img/yougasi.png" />
             </a>
           </div>
@@ -275,7 +223,7 @@
 
     <!--カテゴリーの表示-->
     <div class="category_hyouji">
-      <p class="kategory">イチオシカテゴリー</p>
+      <p class="p1_midasi">イチオシカテゴリー</p>
       <ul class="category_1">
         <li class="category_2" v-for="content in contents" :key="content.id">
           <nuxt-link :to="`category/${content.id}/page/1`">
@@ -285,8 +233,50 @@
         </li>
       </ul>
     </div>
+    </section>
 
+  <!--問い合わせフォーム-->
+  <section class="area" id="area-3">
+  <section id="contact">
+  
+  <h1 class="section-header">Contact</h1>
+  
+  <div class="contact-wrapper">
+  
+  <!-- Left contact page --> 
+    
+    <form id="contact-form" class="form-horizontal" role="form">
+       
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+        </div>
+      </div>
 
+      <div class="form-group">
+        <div class="col-sm-12">
+          <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+        </div>
+      </div>
+
+      <div>
+      <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+      </div>
+      
+      <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <img src="@/assets/img/sousinn_buttom.png" style="width: 60px; height: 100%;">
+        <div class="alt-send-button">
+          <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
+        </div>
+      
+      </button>
+      
+    </form>
+    
+  </div>
+  
+  </section>
+  </section>
 
 
     <!-- footer -->
@@ -298,6 +288,23 @@
            <li>service</li>
            <li>Contact Us</li>
           </ul>
+
+          <ul class="social-media-list">
+          <li><a href="#" target="_blank" class="contact-icon">
+            <!-- <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;"> -->
+            <i class="fa fa-github" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-codepen" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fa fa-twitter" aria-hidden="true"></i></a>
+          </li>
+          <li><a href="#" target="_blank" class="contact-icon">
+            <i class="fab fa-line"></i>
+            </a>
+          </li>       
+        </ul>
           <p>© All rights reserved by dmmwebcampmedia.</p>
         </footer>
     </div>
@@ -418,6 +425,20 @@ export default {
         // });
       });
     }
+
+    $('#page-link a[href*="#"]').click(function () {
+      var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+      var pos = $(elmHash).offset().top;  //idの上部の距離を取得
+      $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+      return false;
+    });
+
+    document.querySelector('#contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      e.target.elements.name.value = '';
+      e.target.elements.email.value = '';
+      e.target.elements.message.value = '';
+    });
   },
 
   name: 'SearchForm',
@@ -437,7 +458,7 @@ form{
   margin-bottom: 3rem;
 }
 
-input[type=text] {
+/* input[type=text] {
   font-size: 1.2rem;
   padding: 4px 8px;
   width: 245px;
@@ -451,9 +472,9 @@ input[type=text] {
 input[type=text]:focus {
   outline: 0;
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-}
+} */
 
-button {
+/* button {
   z-index: 1;
   height:39px;
   width:50px;	
@@ -464,5 +485,6 @@ button {
   color:#ffffff;
   border:none;
   border-radius:0 25px 25px 0;
-}
+} */
+
 </style>

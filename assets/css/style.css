@@ -115,6 +115,19 @@ body {background-color: rgb(0, 0, 0);}
   color:#888;
   }
 
+  .search-btn{
+  z-index: 1;
+  height:39px;
+  width:50px;	
+  position:absolute; 
+  left:200px; 
+  top:0;
+  background:#7fbfff;
+  color:#ffffff;
+  border:none;
+  border-radius:0 25px 25px 0;
+  }
+
 /*タイトルの設定*/
 .title {
     font-family: 'Cormorant', serif;
@@ -122,13 +135,42 @@ body {background-color: rgb(0, 0, 0);}
     font-weight: bold;
     /*margin-top: 300px;*/
     font-size: 8vw;
-    padding: 40px 20px 40px 20px;
+    padding: 5% 20px 5% 20px;
 }
 
 /*テキストの設定*/
+.kennsaku_text{
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  width: 245px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  border: solid 1px #ccc;
+  background-color: #fff;
+  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
+}
+
+.kennsaku_text:focus{
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+@font-face {
+  font-family: "myfont";
+  src: url("@/assets/font/くまもと本丸ゴシックmini.otf") format("opentype");
+}
 .p1 {
     color: white;
-    font-size: 2vw;
+    font-size: 3.5vw;
+    font-family: "myfont", sans-serif;
+    padding: 3% 20%;
+}
+
+.p1_midasi{
+    color: white;
+    font-size: 3.5vw;
+    font-family: "myfont", sans-serif;
+    padding: 0 2%;
 }
 
 .p2 {
@@ -478,7 +520,7 @@ opacity: 0;
 
     /*おすすめスイーツ*/
     .osusume{
-      padding: 60px 0 60px 0;
+      padding: 10% 0;
     }
     /*画像のスライドのパディング*/
     .slider{
@@ -529,23 +571,29 @@ opacity: 0;
 
     /*レシピ一覧の配列*/
     .recipe{
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-flow:row wrap;
+      justify-content: center;
+      /* grid-template-columns: 1fr 1fr 1fr; */
       height: 100%;
     }
 
     .recipe img{
-      width: 60%;
-      height: 90%;
+      width: 100%;
+      height: 100%;
       border-radius: 16px;
     }
 
     .recipe_hairetu{
+      height: 100%;
+      /* margin: 5%; */
       text-align: center;
       font-family: 'Cormorant', serif;
       font-size: 100%;
       font-weight: bold;
       padding: 70px 0 0px 0;
+      justify-content: space-around;
+      /* width: calc(100% / 3 - 4%); */
     }
 
     /*レシピの詳細ページの設定*/
@@ -558,8 +606,10 @@ opacity: 0;
     }
     .recipe_img{
       border-radius: 32px;
-      height: 100%;
       width: 70%;
+      /* height: 100%;
+      width: 70%; */
+      object-fit: cover;
     }
     .text_setting{
       padding: 0 10% 0 10%;
@@ -580,8 +630,12 @@ opacity: 0;
 
     /*材料テキストの配置*/
     .material{
-      padding: 30px 50px 30px 50px;
-      font-size: 2vw;
+      padding: 0 10%;
+      font-size: 3vw;
+    }
+
+    .material_tag{
+      padding: 10% 0;
     }
 
     
@@ -718,4 +772,310 @@ opacity: 0;
       justify-content: right;
       /* align-items: right; */
     }
+
+
+    /*ページネーション*/
+    .wrapper{
+      padding: 40px 0 0 0;
+      text-align: center;
+    }
+
+    .pager{
+      display: inline-flex;
+      /* align-items: center; */
+      
+    }
+
+    .page{
+      
+      margin-left: 5px;
+      margin-right: 5px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      overflow: hidden;
+      background: #000000;
+      border: solid 2px #ffffff;
+      font-size: 14px;
+      color: #111;
+      font-weight: bold;
+      transition: all 0.15s linear;
+    }
+
+    /*おすすめカテゴリーボタンクリック*/
+    .kotira{
+      width: 40%;
+      transition: all 0.5s;
+    }
+
+    .kotira:hover{
+      width: 38%;
+    }
+
+
+    .toiawase{
+      color: #fff;
+    }
+
+
+    /*問い合わせフォーム*/
+    #contact {
+      width: 100%;
+      height: 100%;
+    }
     
+    .section-header {
+      text-align: center;
+      margin: 0 auto;
+      padding: 40px 0;
+      font: 300 60px 'Oswald', sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 6px;
+    }
+    
+    .contact-wrapper {
+      text-align: center;
+      /* display: flex; */
+      /* flex-direction: row;
+      justify-content: space-between; */
+      margin: 0 auto;
+      padding: 20px;
+      /* position: relative; */
+    }
+    
+    /* Left contact page */
+    .form-horizontal {
+      /*float: left;*/
+      max-width: 100%;
+      font-family: 'Lato';
+      font-weight: 400;
+    }
+    
+    .form-control, 
+    textarea {
+      width: 70%;
+      max-width: 800px;
+      background-color: #000;
+      color: #fff;
+      letter-spacing: 1px;
+      border: 2px solid #ffffff;
+      border-radius: 5px;
+    }
+
+    .form-group{
+      padding: 0 0 10px 0;
+    }
+    
+    .send-button {
+      margin-top: 15px;
+      height: 34px;
+      width: 50%;
+      overflow: hidden;
+      transition: all .2s ease-in-out;
+    }
+    
+    .alt-send-button {
+      width: 800px;
+      height: 34px;
+      transition: all .2s ease-in-out;
+    }
+    
+    .send-text {
+      display: block;
+      margin-top: 10px;
+      font: 700 12px 'Lato', sans-serif;
+      letter-spacing: 2px;
+    }
+    
+    .alt-send-button:hover {
+      transform: translate3d(0px, -29px, 0px);
+    }
+    
+    /* Social Media Icons */
+    .social-media-list {
+      position: relative;
+      font-size: 22px;
+      text-align: center;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0;
+    }
+    
+    .social-media-list li a {
+      color: #fff;
+    }
+    
+    .social-media-list li {
+      position: relative; 
+      display: inline-block;
+      height: 60px;
+      width: 60px;
+      margin: 10px 3px;
+      line-height: 60px;
+      border-radius: 50%;
+      color: #fff;
+      background-color: rgb(27,27,27);
+      cursor: pointer; 
+      transition: all .2s ease-in-out;
+    }
+    
+    .social-media-list li:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+      border-radius: 50%;
+      opacity: 0;
+      box-shadow: 0 0 0 1px #fff;
+      transition: all .2s ease-in-out;
+    }
+    
+    .social-media-list li:hover {
+      background-color: #fff; 
+    }
+    
+    .social-media-list li:hover:after {
+      opacity: 1;  
+      transform: scale(1.12);
+      transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+    }
+    
+    .social-media-list li:hover a {
+      color: #000;
+    }
+    
+    .copyright {
+      font: 200 14px 'Oswald', sans-serif;
+      color: #555;
+      letter-spacing: 1px;
+      text-align: center;
+    }
+    
+    hr {
+      border-color: rgba(255,255,255,.6);
+    }
+    
+    /* Begin Media Queries*/
+    @media screen and (max-width: 850px) {
+      .contact-wrapper {
+        display: flex;
+        flex-direction: column;
+      }
+      .direct-contact-container, .form-horizontal {
+        margin: 0 auto;
+      }  
+      
+      .direct-contact-container {
+        margin-top: 60px;
+        max-width: 300px;
+      }    
+      .social-media-list li {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+      }
+      .social-media-list li:after {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+      }
+    }
+    
+    @media screen and (max-width: 569px) {
+    
+      .direct-contact-container, .form-wrapper {
+        float: none;
+        margin: 0 auto;
+      }  
+      .form-control, textarea {
+        
+        margin: 0 auto;
+      }
+     
+      
+      .name, .email, textarea {
+        width: 280px;
+      } 
+      
+      .direct-contact-container {
+        margin-top: 60px;
+        max-width: 280px;
+      }  
+      .social-media-list {
+        left: 0;
+      }
+      .social-media-list li {
+        height: 55px;
+        width: 55px;
+        line-height: 55px;
+        font-size: 2rem;
+      }
+      .social-media-list li:after {
+        width: 55px;
+        height: 55px;
+        line-height: 55px;
+      }
+      
+    }
+    
+    @media screen and (max-width: 410px) {
+      .send-button {
+        width: 99%;
+      }
+    }
+
+    .midasi{
+      padding: 0 7%;
+      font-size: 5vw;
+      
+    }
+
+    .tags_hairetu_1{
+      padding: 0 10%;
+      /* display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      padding: 5% 10%; */
+    }
+
+    .tags_hairetu_2{
+      list-style: none;
+      font-size: 3vw;
+    }
+
+    .container{
+      position: relative;
+      width: 60%;
+      height: 100%;
+      margin: auto;
+    }
+
+    .Time_recipe{
+      font-family: "myfont", sans-serif;
+      border-radius: 12px;
+      width: 30%;
+      height: 10%;
+      background-color: #9ea0a0d4;
+      position: absolute;
+      color: rgb(0, 0, 0);
+      padding:0;
+      margin:0;
+      top: 0;
+      left: 0;
+    }
+
+    .Time_cook{
+      padding: 1% 0 0 0;
+      font-size: 105%;
+    }
+
+    .omission{
+      color: #fff;
+    }
