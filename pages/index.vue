@@ -289,9 +289,9 @@
            <li>Contact Us</li>
           </ul>
 
-          <ul class="social-media-list">
+          <!-- <ul class="social-media-list">
           <li><a href="#" target="_blank" class="contact-icon">
-            <!-- <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;"> -->
+            <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;">
             <i class="fa fa-github" aria-hidden="true"></i></a>
           </li>
           <li><a href="#" target="_blank" class="contact-icon">
@@ -304,7 +304,7 @@
             <i class="fab fa-line"></i>
             </a>
           </li>       
-        </ul>
+        </ul> -->
           <p>© All rights reserved by dmmwebcampmedia.</p>
         </footer>
     </div>
