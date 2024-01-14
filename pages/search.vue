@@ -24,6 +24,19 @@
     </nuxt-link>
   </article> -->
 
+
+  <ul class="recipe">
+      <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
+        <nuxt-link :to="`/recipe/${content.id}`" class="container">
+        <img :src=content.eyecatch.url>
+        <div class="Time_recipe">
+          <p class="Time_cook">{{content.time}}</p>
+        </div><br>
+          {{content.title}}
+        </nuxt-link>
+      </li>
+  </ul>
+
 </div>
 </template>
 
@@ -89,7 +102,7 @@ input[type=text] {
   font-size: 16px;
   padding-left: 10px;
   box-shadow: none;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   transition: box-shadow 0.2s ease;
 }
 

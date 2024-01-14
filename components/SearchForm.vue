@@ -45,18 +45,22 @@ export default {
 <style scoped>
 
 form{
+  position:relative;
+  max-width: 100%;	
+  margin: 12px 5% 0 0;
   margin-bottom: 3rem;
-}
+  text-align: right;
+  }
 
 input[type=text] {
   font-size: 1.2rem;
-  padding: 4px 8px;
-  width: 245px;
+  padding: 4px 8px; 
+  width: 200px;
   box-sizing: border-box;
   border-radius: 20px;
   border: solid 1px #ccc;
   background-color: #fff;
-  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
+  /* font-family: "Ubuntu", "Noto Sans JP", sans-serif; */
 }
 
 input[type=text]:focus {
@@ -66,13 +70,19 @@ input[type=text]:focus {
 
 button {
   font-size: 1.2rem;
-  -webkit-appearance: none;
-  padding: 4px 8px;
+  /* -webkit-appearance: none; */
+  padding: 4px 2%;
   border-radius: 4px;
-  background-color: #fff;
+  background-color: #6d6d6e;
   border: solid 1px #ccc;
   vertical-align: bottom;
-  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
-  cursor: pointer;  
+  /* font-family: "Ubuntu", "Noto Sans JP", sans-serif; */
+  cursor: pointer;
+}
+
+.search-btn{
+  margin: 0 5% 0 0;
+  color: #fff;
+  text-align: right;
 }
 </style>
