@@ -48,8 +48,9 @@ form{
   position:relative;
   max-width: 100%;	
   margin: 12px 5% 0 0;
-  margin-bottom: 3rem;
+  /* margin-bottom: 3rem; */
   text-align: right;
+  /* margin-left: auto; */
   }
 
 input[type=text] {

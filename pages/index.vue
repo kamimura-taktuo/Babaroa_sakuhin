@@ -40,10 +40,11 @@
                   </a>
                 </h1>
               </div>
+
+          <!--ハンバーガーメニュー-->
           <input type="checkbox" class="menu-btn" id="menu-btn">
           <label for="menu-btn" class="menu-icon">
             <span class="navicon">
-              
             </span>
           </label>
 
@@ -284,12 +285,12 @@
     <!-- footer -->
     <div>
          <footer>
-          <ul class="footer-menu">
+          <!-- <ul class="footer-menu">
            <li>home</li>
            <li>about</li>
            <li>service</li>
            <li>Contact Us</li>
-          </ul>
+          </ul> -->
 
           <!-- <ul class="social-media-list">
           <li><a href="#" target="_blank" class="contact-icon">
