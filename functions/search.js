@@ -13,7 +13,7 @@ exports.handler = async (event) => {
   }
   return client
     .get({
-      endpoint: 'post',
+      endpoint: 'content',
       queries: { q },
     })
     .then((data) => {

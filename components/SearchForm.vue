@@ -82,7 +82,7 @@ button {
 }
 
 .search-btn{
-  margin: 0 5% 0 0;
+  margin: 0 1% 0 0;
   color: #fff;
   text-align: right;
 }
