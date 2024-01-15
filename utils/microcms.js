@@ -1,8 +1,8 @@
 const { createClient } = require('microcms-js-sdk');
 require('dotenv').config();
 const {
-  Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi,
-  test1024
+  API_KEY,
+  SERVICE_DOMAIN
 } = process.env;
 export const client = createClient({
   serviceDomain: test1024,

@@ -61,8 +61,15 @@ module.exports =  {
   components: true,
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-  buildModules: [
-  ],
+  buildModules: [ ['nuxt-microcms-module'] ],
+
+  microcms: {
+    options: {
+      serviceDomain: process.env.test1024,
+      apiKey: process.env.Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi,
+    },
+    mode: process.env.NODE_ENV === 'production' ? 'server' : 'all',
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxtjs/axios','@nuxtjs/proxy'],
