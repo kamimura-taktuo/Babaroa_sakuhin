@@ -27,6 +27,17 @@
       </div>
     </div>
 
+<!--材料-->
+    <div class="material_tag">
+    <p class="midasi">材料</p>
+    <div class="material" v-html="main"></div>
+    </div>
+
+    <div class="repeat" v-for="item in procedure" :key="item.body" style="display: flex;">
+      <div v-html="item.body" style="flex: 0 0 50%; padding: 0 10% 0 10%;" ></div>
+      <img :src="item.img.url"  height="300px" style="flex: 0 0 50%; margin-bottom: 30px;">
+    </div>
+
 
     <!--材料-->
     <div class="material_tag">
@@ -35,8 +46,9 @@
     </div>
 
     <!--手順-->
-
     
+      
+  
     <!--タグ-->
     <p class="midasi">タグ</p>
     <ul class="tags_hairetu_1">
@@ -76,19 +88,10 @@ export default {
         headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' }
 
       }
+      
     )
     return data
   }
 }
 
-export const Main = ({ repeat }) => (
-  <main>
-    {repeat.map((item, i) =>
-      item.fieldId === 'procedure' ? (
-           // 画像 + テキスト表示用のコンポーネントを利用する
-        <repeat key={i}  text={item.body} image={item.img} />
-      ) : null
-    )}
-  </main>
-);
 </script>

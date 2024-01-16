@@ -1083,3 +1083,8 @@ opacity: 0;
       color: #fff;
       padding-top: 2%;
     }
+
+    .repeat{
+      font-size: 30px;
+      text-align: center;
+    }
