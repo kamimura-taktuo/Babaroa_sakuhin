@@ -115,7 +115,7 @@ body {background-color: rgb(0, 0, 0);}
   color:#888;
   }
 
-  .search-btn{
+  /* .search-btn{
   z-index: 1;
   height:39px;
   width:50px;	
@@ -126,7 +126,7 @@ body {background-color: rgb(0, 0, 0);}
   color:#ffffff;
   border:none;
   border-radius:0 25px 25px 0;
-  }
+  } */
 
 /*タイトルの設定*/
 .title {
@@ -701,14 +701,17 @@ opacity: 0;
     }
     
     .menu-btn {
+      position: fixed;
       display: none;
     }
     
     .menu-icon {
-      display: inline-block;
-      position: relative;
+      /* display: inline-block; */
+      position: absolute;
       cursor: pointer;
-      padding: 32px 0 14px 80px;
+      top: 32px;
+      left: 65px;
+      /* padding: 32px 0 14px 80px; */
       -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     }
     
@@ -1078,4 +1081,5 @@ opacity: 0;
 
     .omission{
       color: #fff;
+      padding-top: 2%;
     }

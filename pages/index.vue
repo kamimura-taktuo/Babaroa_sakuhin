@@ -9,23 +9,25 @@
         </div>
 
       <header class="header">
+
+        <search-form/>
         <!-- <div>
           読み込み
-          <search-form/>
+          
                 <article v-for="post in posts" :key="post.id" style="margin-bottom:30px;" class="article">
                     ...省略
                 </article>
             <index-pager :numPages="numPages" :current="current">
             </index-pager>
         </div> -->
-        <div class="navtext-container">
+        <!-- <div class="navtext-container">
           <form id="form4" @submit.prevent="submit">
                 <input type="text" v-model="query" ref="searchForm" class="kennsaku_text">
                   <button class="search-btn" type="submit">
                     検索
                   </button>
         </form>
-        </div>
+        </div> -->
         <div class="logo">
                 <h1 class="header-title">
                   <a href="/">
@@ -38,10 +40,11 @@
                   </a>
                 </h1>
               </div>
+
+          <!--ハンバーガーメニュー-->
           <input type="checkbox" class="menu-btn" id="menu-btn">
           <label for="menu-btn" class="menu-icon">
             <span class="navicon">
-              
             </span>
           </label>
 
@@ -282,16 +285,16 @@
     <!-- footer -->
     <div>
          <footer>
-          <ul class="footer-menu">
+          <!-- <ul class="footer-menu">
            <li>home</li>
            <li>about</li>
            <li>service</li>
            <li>Contact Us</li>
-          </ul>
+          </ul> -->
 
-          <ul class="social-media-list">
+          <!-- <ul class="social-media-list">
           <li><a href="#" target="_blank" class="contact-icon">
-            <!-- <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;"> -->
+            <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;">
             <i class="fa fa-github" aria-hidden="true"></i></a>
           </li>
           <li><a href="#" target="_blank" class="contact-icon">
@@ -304,7 +307,7 @@
             <i class="fab fa-line"></i>
             </a>
           </li>       
-        </ul>
+        </ul> -->
           <p>© All rights reserved by dmmwebcampmedia.</p>
         </footer>
     </div>
@@ -396,19 +399,19 @@ export default {
       // console.log(this.$params)
     },
 
-    submit() {
-      if (this.canSubmit) {
-        //検索が有効な場合に検索結果ページに遷移させる
-        this.$router.push({
-          path: '/search',
-          query: {
-            q: this.query
-          }
-        })
-        this.query = ''
-        this.$refs.searchForm.blur()
-      }
-    }
+    // submit() {
+    //   if (this.canSubmit) {
+    //     //検索が有効な場合に検索結果ページに遷移させる
+    //     this.$router.push({
+    //       path: '/search',
+    //       query: {
+    //         q: this.query
+    //       }
+    //     })
+    //     this.query = ''
+    //     this.$refs.searchForm.blur()
+    //   }
+    // }
   },
   mounted() {
     // このページで動くスクリプト
@@ -426,6 +429,7 @@ export default {
       });
     }
 
+    //メニュークリック時の動作
     $('#page-link a[href*="#"]').click(function () {
       var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
       var pos = $(elmHash).offset().top;  //idの上部の距離を取得
@@ -441,14 +445,14 @@ export default {
     });
   },
 
-  name: 'SearchForm',
-  computed: {
-    // 検索キーワードが有効な場合にtrueを返す
-    canSubmit() {
-      return !!this.query && // キーワードがないとだめ
-        !/^\s+$/.test(this.query) // 空白のみはだめ
-    }
-  },
+  // name: 'SearchForm',
+  // computed: {
+  //   // 検索キーワードが有効な場合にtrueを返す
+  //   canSubmit() {
+  //     return !!this.query && // キーワードがないとだめ
+  //       !/^\s+$/.test(this.query) // 空白のみはだめ
+  //   }
+  // },
 }
 </script>
 

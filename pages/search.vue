@@ -1,11 +1,31 @@
+
+
+<!--検索結果表示のページ-->
+
+
 <template>
 <div>
+<!--左上のロゴの表示-->
+  <div class="logo">
+    <h1 class="header-title">
+      <a href="/">
+        <img
+          src="@/assets/img/logo.png"
+          alt="rogo"
+          width="65"
+          height="65"
+        />
+      </a>
+    </h1>
+  </div>
+  
+
   <!-- 検索フォーム -->
   <div class="search-form">
     <input v-model="q"
     type="text"
     @keyup.enter="(e) => search(e.target.value)"
-    @keypress="setSearchable"/>
+    @keypress="setSearchable" class="search-text"/>
   </div>
 
   <!-- 検索結果件数 -->
@@ -23,6 +43,20 @@
       </h1>
     </nuxt-link>
   </article> -->
+
+
+ <!--検索記事-->
+  <ul class="recipe">
+      <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
+        <nuxt-link :to="`/recipe/${content.id}`" class="container">
+        <img :src=content.eyecatch.url>
+        <div class="Time_recipe">
+          <p class="Time_cook">{{content.time}}</p>
+        </div><br>
+          {{content.title}}
+        </nuxt-link>
+      </li>
+  </ul>
 
 </div>
 </template>
@@ -76,6 +110,8 @@ export default {
 <style scoped>
 
 .search-form {
+  padding: 64px 0 0 20px;
+  width: 45%;
   margin-top: 2rem;
   position: relative;
 }
@@ -89,7 +125,7 @@ input[type=text] {
   font-size: 16px;
   padding-left: 10px;
   box-shadow: none;
-  -webkit-appearance: none;
+  /* -webkit-appearance: none; */
   transition: box-shadow 0.2s ease;
 }
 
@@ -98,7 +134,11 @@ input[type=text]:focus {
   box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
+.search-text{
+  color: #fff;
+}
 .search-result {
+  padding: 0 0 0 10px;
   margin-top: 3rem;
   font-size: 1.4rem;
   color: #6F959E;

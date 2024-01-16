@@ -80,6 +80,22 @@ export default {
       pager: [...Array(Math.ceil(data.totalCount / limit)).keys()],
     };
     return data
+  },
+
+  mounted(){
+    if(process.browser){
+      $(function () {
+        $(window).on('load',function(){
+          $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
+          $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
+        });
+        // $('.your-class').slick({
+        //   fade: true,
+        //   autoplay: true,
+        //   autoplaySpeed: 3000,
+        // });
+      });
+    }
   }
   
 }

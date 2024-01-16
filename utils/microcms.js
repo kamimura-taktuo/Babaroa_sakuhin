@@ -5,6 +5,6 @@ const {
   SERVICE_DOMAIN
 } = process.env;
 export const client = createClient({
-  serviceDomain: SERVICE_DOMAIN,
-  apiKey: API_KEY,
+  serviceDomain: test1024,
+  apiKey: Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi,
 });
