@@ -1,44 +1,74 @@
 <template>
 <div>
-  <form @submit.prevent="submit">
+
+  <form >
+  <input id="search_text" type="search" name="search" placeholder="キーワードを入力" v-model="searchText" class="Search_text">
+  <input id="search_btn" type="button" name="submit" value="検索" @click="searchRecipe" class="Search_buttom" onclick="">
+  </form>
+
+  
+  <!-- <form @submit.prevent="submit">
     <input type="text" v-model="query" ref="searchForm">
     <button class="search-btn" type="submit">
       検索
     </button>
-  </form>
+  </form> -->
+
+
 </div>
 </template>
 
 <script>
 export default {
-  name: 'SearchForm',
   data() {
     return {
-      query: '',
+      searchText: '',
+      searchResult: [],
     }
   },
-  computed: {
-    // 検索キーワードが有効な場合にtrueを返す
-    canSubmit() {
-      return !!this.query && // キーワードがないとだめ
-        !/^\s+$/.test(this.query) // 空白のみはだめ
-    }
+  methods:{
+    search(){
+      let s_value = this.searchText
+      //URIエンコード
+      s_value = encodeURIComponent(s_value)
+      //検索実行
+      this.$router.push(`search?id=${s_value}`);
+    },
+
+    /*検索キーワードの取得*/ 
+    searchRecipe() {
+      console.log(this.searchText)
+    },
   },
-  methods: {
-    submit() {
-      if (this.canSubmit) {
-        //検索が有効な場合に検索結果ページに遷移させる
-        this.$router.push({
-          path: '/search',
-          query: {
-            q: this.query
-          }
-        })
-        this.query = ''
-        this.$refs.searchForm.blur()
-      }
-    }
-  }
+  
+  // name: 'SearchForm',
+  // data() {
+  //   return {
+  //     query: '',
+  //   }
+  // },
+  // computed: {
+  //   // 検索キーワードが有効な場合にtrueを返す
+  //   canSubmit() {
+  //     return !!this.query && // キーワードがないとだめ
+  //       !/^\s+$/.test(this.query) // 空白のみはだめ
+  //   }
+  // },
+  // methods: {
+  //   submit() {
+  //     if (this.canSubmit) {
+  //       //検索が有効な場合に検索結果ページに遷移させる
+  //       this.$router.push({
+  //         path: '/search',
+  //         query: {
+  //           q: this.query
+  //         }
+  //       })
+  //       this.query = ''
+  //       this.$refs.searchForm.blur()
+  //     }
+  //   }
+  // }
 }
 </script>
 
@@ -47,7 +77,7 @@ export default {
 form{
   position:relative;
   max-width: 100%;	
-  margin: 12px 5% 0 0;
+  margin: 15px 5% 0 0;
   /* margin-bottom: 3rem; */
   text-align: right;
   /* margin-left: auto; */
@@ -81,9 +111,25 @@ button {
   cursor: pointer;
 }
 
-.search-btn{
+.search_btn{
   margin: 0 1% 0 0;
   color: #fff;
   text-align: right;
+}
+.Search_buttom{
+  padding: 4px 2%;
+  border-radius: 4px;
+  background-color: #6d6d6e;
+  border: solid 1px #ccc;
+  color: #fff;
+  margin: 0 3% 0 0;
+}
+.Search_text{
+  width: 160px;
+  padding: 4px 2px;
+  border-radius: 4px;
+  border: solid 1px #ccc;
+  color: #fff;
+  
 }
 </style>

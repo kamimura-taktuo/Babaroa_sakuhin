@@ -21,15 +21,15 @@
   
 
   <!-- 検索フォーム -->
-  <div class="search-form">
+  <!-- <div class="search-form">
     <input v-model="q"
     type="text"
     @keyup.enter="(e) => search(e.target.value)"
     @keypress="setSearchable" class="search-text"/>
-  </div>
+  </div> -->
 
   <!-- 検索結果件数 -->
-  <p class="search-result"> {{ totalCount }}件の検索結果</p>
+  <!-- <p class="search-result"> {{ totalCount }}件の検索結果</p> -->
 
   <!-- 記事一覧
   <article v-for="post in contents" :key="post.id" style="margin-bottom:30px;" class="article">
@@ -65,46 +65,56 @@
 import axios from 'axios'
 
 export default {
-  data() {
-    return {
-      contents: this.contents || [], // 検索結果の配列
-      totalCount: this.totalCount || 0, // 検索結果件数の表示用
-      q: this.$route.query.q, // SearchForm.vueから渡されるクエリ
-      searchable: true, // この画面から検索した際の制御
-    };
+
+  async asyncData({ query }) {
+    var text = query.id
+    const { data } = await axios.get(
+      //検索実行
+      `https://test1024.microcms.io/api/v1/menu/?q=${text}`,
+      { headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' } }
+    )
   },
 
-  async created() {
-    const query = this.$route.query;
-    if (query.q === undefined) {
-      return;
-    }
-    // 検索可能ならsearchメソッド実行
-    this.search(query.q);
-  },
-  methods: {
-    setSearchable() {
-      this.searchable = true;
-    },
-    async search(q = '') {
-      if (!q.trim() || !this.searchable) {
-        return;
-      }
+  // data() {
+  //   return {
+  //     contents: this.contents || [], // 検索結果の配列
+  //     totalCount: this.totalCount || 0, // 検索結果件数の表示用
+  //     q: this.$route.query.q, // SearchForm.vueから渡されるクエリ
+  //     searchable: true, // この画面から検索した際の制御
+  //   };
+  // },
 
-      const { data, error } = await axios
-        // search.jsにクエリを渡して呼び出す
-        .get(`/.netlify/functions/search?q=${q}`)
-        .catch((error) => ({
-          error
-        }));
-      if (error) {
-        return;
-      }
-      this.contents = data.contents;
-      this.totalCount = data.totalCount;
-      this.searchable = false;
-    }
-  }
+  // async created() {
+  //   const query = this.$route.query;
+  //   if (query.q === undefined) {
+  //     return;
+  //   }
+  //   // 検索可能ならsearchメソッド実行
+  //   this.search(query.q);
+  // },
+  // methods: {
+  //   setSearchable() {
+  //     this.searchable = true;
+  //   },
+  //   async search(q = '') {
+  //     if (!q.trim() || !this.searchable) {
+  //       return;
+  //     }
+
+  //     const { data, error } = await axios
+  //       // search.jsにクエリを渡して呼び出す
+  //       .get(`/.netlify/functions/search?q=${q}`)
+  //       .catch((error) => ({
+  //         error
+  //       }));
+  //     if (error) {
+  //       return;
+  //     }
+  //     this.contents = data.contents;
+  //     this.totalCount = data.totalCount;
+  //     this.searchable = false;
+  //   }
+  //  }
 }
 </script>
 <style scoped>

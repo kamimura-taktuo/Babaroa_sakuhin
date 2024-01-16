@@ -9,25 +9,10 @@
         </div>
 
       <header class="header">
-
+        
+        <!--検索フォームの呼び出し-->
         <search-form/>
-        <!-- <div>
-          読み込み
-          
-                <article v-for="post in posts" :key="post.id" style="margin-bottom:30px;" class="article">
-                    ...省略
-                </article>
-            <index-pager :numPages="numPages" :current="current">
-            </index-pager>
-        </div> -->
-        <!-- <div class="navtext-container">
-          <form id="form4" @submit.prevent="submit">
-                <input type="text" v-model="query" ref="searchForm" class="kennsaku_text">
-                  <button class="search-btn" type="submit">
-                    検索
-                  </button>
-        </form>
-        </div> -->
+        
         <div class="logo">
                 <h1 class="header-title">
                   <a href="/">
@@ -149,7 +134,7 @@
                         <div class="slide-item__text">
                           <p class="p6">アップルパイ</p>
                           <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　500000kcal</p><br>
+                          <p class="p6">カロリー　304kcal</p><br>
                           <a href="/recipe/wtmwzn68w"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -399,34 +384,16 @@ export default {
       // console.log(this.$params)
     },
 
-    // submit() {
-    //   if (this.canSubmit) {
-    //     //検索が有効な場合に検索結果ページに遷移させる
-    //     this.$router.push({
-    //       path: '/search',
-    //       query: {
-    //         q: this.query
-    //       }
-    //     })
-    //     this.query = ''
-    //     this.$refs.searchForm.blur()
-    //   }
-    // }
   },
   mounted() {
     // このページで動くスクリプト
     if(process.browser){
-      $(function () {
-        $(window).on('load',function(){
+      // $(function () {
+      //   $(window).on('load',function(){
           $("#splash").delay(1500).fadeOut('slow');//ローディング画面を1.5秒（1500ms）待機してからフェードアウト
           $("#splash_logo").delay(1200).fadeOut('slow');//ロゴを1.2秒（1200ms）待機してからフェードアウト
-        });
-        // $('.your-class').slick({
-        //   fade: true,
-        //   autoplay: true,
-        //   autoplaySpeed: 3000,
-        // });
-      });
+      //   });
+      // });
     }
 
     //メニュークリック時の動作
@@ -444,15 +411,6 @@ export default {
       e.target.elements.message.value = '';
     });
   },
-
-  // name: 'SearchForm',
-  // computed: {
-  //   // 検索キーワードが有効な場合にtrueを返す
-  //   canSubmit() {
-  //     return !!this.query && // キーワードがないとだめ
-  //       !/^\s+$/.test(this.query) // 空白のみはだめ
-  //   }
-  // },
 }
 </script>
 
