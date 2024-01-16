@@ -1085,6 +1085,20 @@ opacity: 0;
     }
 
     .repeat{
-      font-size: 30px;
+      width: 100%;
       text-align: center;
+      align-items: center;
+    }
+    .repeat_img{
+      border-radius: 32px;
+      padding: 3% 5%;
+      width: 10%;
+      height: 90%;
+      object-fit: cover;
+    }
+
+    .repeat_text{
+      
+      margin-top: 0 auto;
+      font-size: 2vw;
     }

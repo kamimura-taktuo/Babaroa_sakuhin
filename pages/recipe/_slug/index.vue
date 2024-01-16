@@ -27,26 +27,21 @@
       </div>
     </div>
 
-<!--材料-->
-    <div class="material_tag">
-    <p class="midasi">材料</p>
-    <div class="material" v-html="main"></div>
-    </div>
-
-    <div class="repeat" v-for="item in procedure" :key="item.body" style="display: flex;">
-      <div v-html="item.body" style="flex: 0 0 50%; padding: 0 10% 0 10%;" ></div>
-      <img :src="item.img.url"  height="300px" style="flex: 0 0 50%; margin-bottom: 30px;">
-    </div>
-
-
     <!--材料-->
     <div class="material_tag">
     <p class="midasi">材料</p>
     <div class="material" v-html="main"></div>
     </div>
 
-    <!--手順-->
     
+
+
+
+    <!--手順-->
+    <div class="repeat" v-for="item in procedure" :key="item.body" style="display: flex;">
+      <div v-html="item.body" style="flex: 0 0 50%; padding: 0 10% 0 10%;" class="repeat_text"></div>
+      <img :src="item.img.url" style="flex: 0 0 50%; margin-bottom: 30px;" class="repeat_img">
+    </div>    
       
   
     <!--タグ-->
@@ -54,7 +49,7 @@
     <ul class="tags_hairetu_1">
       <li v-for="contents in tags" :key="contents.id" class="tags_hairetu_2">
         <nuxt-link :to="`../tag/${contents.id}`">
-        <img src="@/assets/img/tagu_Picture.png" width="5%">
+        <img src="@/assets/img/tagu_Picture.png" width="4%">
           {{ contents.tags_name }}
         </nuxt-link>
       </li>
