@@ -21,7 +21,7 @@
     <div class="calorie">
       <div  style="display: flex;">
         <div class="img_setting" style="flex: 0 0 50%;"><img class="recipe_img" :src="calorie.img.url"></div>
-          <div class="text_setting" style="flex: 0 0 50%;">
+          <div class="text_setting" style="flex: 0 0 45%;">
             <div class="calorie_text" v-html="calorie.main"></div>
           </div>
       </div>
@@ -40,7 +40,7 @@
     <!--手順-->
     <div class="repeat" v-for="item in procedure" :key="item.body" style="display: flex;">
       <div v-html="item.body" style="flex: 0 0 50%; padding: 0 10% 0 10%;" class="repeat_text"></div>
-      <img :src="item.img.url" style="flex: 0 0 50%; margin-bottom: 30px;" class="repeat_img">
+      <img :src="item.img.url" style="flex: 0 0 45%; margin-bottom: 30px;" class="repeat_img">
     </div>    
       
   
@@ -66,6 +66,15 @@
       )}
     </main>
   ); -->
+
+
+  <!-- footer -->
+    <div>
+      <footer>
+        <a href="/">トップへ戻る</a>
+        <p>© All rights reserved by dmmwebcampmedia.</p>
+      </footer>
+    </div>
 
     
 

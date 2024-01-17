@@ -293,6 +293,7 @@
             </a>
           </li>       
         </ul> -->
+        <a href="/">トップへ戻る</a>
           <p>© All rights reserved by dmmwebcampmedia.</p>
         </footer>
     </div>

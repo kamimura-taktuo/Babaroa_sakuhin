@@ -591,7 +591,7 @@ opacity: 0;
       font-family: 'Cormorant', serif;
       font-size: 100%;
       font-weight: bold;
-      padding: 70px 0 0px 0;
+      padding: 40px 0 30px 0;
       justify-content: space-around;
       /* width: calc(100% / 3 - 4%); */
     }
@@ -612,7 +612,10 @@ opacity: 0;
       object-fit: cover;
     }
     .text_setting{
-      padding: 0 10% 0 10%;
+      padding: 0 5% 0 5%;
+      border: 2px solid #ffffff;
+      border-radius: 16px;
+      width: 50%;
     }
     .calorie_text{
       font-size: 2.5vw;
@@ -1042,7 +1045,7 @@ opacity: 0;
     }
 
     .tags_hairetu_1{
-      padding: 0 10%;
+      padding: 0 10% 15% 10%;
       /* display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
       padding: 5% 10%; */
@@ -1086,6 +1089,7 @@ opacity: 0;
 
     .repeat{
       width: 100%;
+      height: auto;
       text-align: center;
       align-items: center;
     }
@@ -1098,7 +1102,9 @@ opacity: 0;
     }
 
     .repeat_text{
-      
-      margin-top: 0 auto;
-      font-size: 2vw;
+      font-size: 2.5vw;
+    }
+
+    .paginetion{
+      padding-bottom: 50px;
     }

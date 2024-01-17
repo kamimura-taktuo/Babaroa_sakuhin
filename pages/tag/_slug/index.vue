@@ -36,6 +36,14 @@
     </nuxt-link>
   </li>
 </ul> -->
+
+<!-- footer -->
+    <div>
+      <footer>
+        <a href="/">トップへ戻る</a>
+        <p>© All rights reserved by dmmwebcampmedia.</p>
+      </footer>
+    </div>
 </div>
 </template>
 

@@ -29,7 +29,7 @@
     </ul>
   </div>
 
-  <div>
+  <div class="paginetion">
     // 略
     <Pagination
     :pager="pager"
@@ -37,7 +37,17 @@
     :category="categoryId"
     />
   </div>
+
+  <!-- footer -->
+    <div>
+      <footer>
+        <a href="/">トップへ戻る</a>
+        <p>© All rights reserved by dmmwebcampmedia.</p>
+      </footer>
+    </div>
 </div>
+
+
 
 
 </template>
