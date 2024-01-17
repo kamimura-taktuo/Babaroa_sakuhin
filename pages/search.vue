@@ -18,6 +18,8 @@
       </a>
     </h1>
   </div>
+
+  <p style="color: #fff;">こんにちは</p>
   
 
   <!-- 検索フォーム -->
@@ -46,7 +48,7 @@
 
 
  <!--検索記事-->
-  <ul class="recipe">
+  <!-- <ul class="recipe">
       <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/recipe/${content.id}`" class="container">
         <img :src=content.eyecatch.url>
@@ -56,7 +58,7 @@
           {{content.title}}
         </nuxt-link>
       </li>
-  </ul>
+  </ul> -->
 
 </div>
 </template>

@@ -3,7 +3,7 @@
 
   <form >
   <input id="search_text" type="search" name="search" placeholder="キーワードを入力" v-model="searchText" class="Search_text">
-  <input id="search_btn" type="button" name="submit" value="検索" @click="searchRecipe" class="Search_buttom" onclick="">
+  <input id="search_btn" type="button" name="submit" value="検索" @click="search" class="Search_buttom">
   </form>
 
   
@@ -28,6 +28,8 @@ export default {
   },
   methods:{
     search(){
+      console.log(this.searchText)
+
       let s_value = this.searchText
       //URIエンコード
       s_value = encodeURIComponent(s_value)
@@ -36,9 +38,9 @@ export default {
     },
 
     /*検索キーワードの取得*/ 
-    searchRecipe() {
-      console.log(this.searchText)
-    },
+    // search() {
+    //   console.log(this.searchText)
+    // },
   },
   
   // name: 'SearchForm',
