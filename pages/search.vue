@@ -19,7 +19,7 @@
     </h1>
   </div>
 
-  <p style="color: #fff;">こんにちは</p>
+  <!-- <p style="color: #fff;">こんにちは</p> -->
   
 
   <!-- 検索フォーム -->
@@ -33,22 +33,9 @@
   <!-- 検索結果件数 -->
   <!-- <p class="search-result"> {{ totalCount }}件の検索結果</p> -->
 
-  <!-- 記事一覧
-  <article v-for="post in contents" :key="post.id" style="margin-bottom:30px;" class="article">
-    <span class="post-published">{{ post.publishedAt | formatDate }}</span>
-    <span v-for="(tag, i) in post.tag" :key="tag.id" class="post-tag">{{ tag.name }}
-      <span v-if="i !== post.tag.length-1" style="margin:0 5px;">/</span>
-    </span>
-    <nuxt-link :to="`/${post.id}`">
-      <h1 class="post-title">
-        {{ post.title }}
-      </h1>
-    </nuxt-link>
-  </article> -->
-
-
  <!--検索記事-->
-  <!-- <ul class="recipe">
+<div>
+  <ul class="recipe">
       <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/recipe/${content.id}`" class="container">
         <img :src=content.eyecatch.url>
@@ -58,7 +45,10 @@
           {{content.title}}
         </nuxt-link>
       </li>
-  </ul> -->
+  </ul>
+</div>
+
+  
 
 </div>
 </template>
@@ -75,6 +65,14 @@ export default {
       `https://test1024.microcms.io/api/v1/menu/?q=${text}`,
       { headers: { 'X-MICROCMS-API-KEY': 'Hwlkh7zsv3NQTyceA44qLqRecQ1ocae1NRGi' } }
     )
+    return data;
+  },
+
+  data() {
+    return {
+      contents: "",
+      //　省略
+    }
   },
 
   // data() {
