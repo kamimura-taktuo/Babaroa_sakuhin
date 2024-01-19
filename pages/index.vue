@@ -190,7 +190,7 @@
     <!--洋菓子・和菓子-->
     <section class="area" id="area-2">
       <p class="p1_midasi">カテゴリー</p>
-    <div>
+    <div class="box zoomInTrigger">
       <div id="cards">
         <div class="card">
           <div class="picture">
@@ -425,6 +425,17 @@ export default {
       }else{
       $(this).removeClass('flipLeft');// 画面外に出たらflipLeftというクラス名を外す
       }
+      });
+
+      $('.zoomInTrigger').each(function(){ //zoomInTriggerというクラス名が
+        var elemPos = $(this).offset().top-50;//要素より、50px上の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('zoomIn');// 画面内に入ったらzoomInというクラス名を追記
+        }else{
+        $(this).removeClass('zoomIn');// 画面外に出たらzoomInというクラス名を外す
+        }
       });
     }
 

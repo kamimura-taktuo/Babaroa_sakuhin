@@ -576,6 +576,7 @@ opacity: 0;
       justify-content: center;
       /* grid-template-columns: 1fr 1fr 1fr; */
       height: 100%;
+      margin-top: 80px;
     }
 
     .recipe img{
@@ -1136,4 +1137,29 @@ opacity: 0;
 
       .delay-time04{  
         animation-delay: 0.4s;
+      }
+
+      /* 拡大 */
+      .zoomIn{
+        animation-name:zoomInAnime;
+        animation-duration:0.5s;
+        animation-fill-mode:forwards;
+      }
+
+      @keyframes zoomInAnime{
+        from {
+        transform: scale(0.6);
+        opacity: 0;
+        }
+
+        to {
+          transform: scale(1);
+        opacity: 1;
+        }
+      }
+
+      /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+      
+      .zoomOutTrigger{
+        opacity: 0;
       }

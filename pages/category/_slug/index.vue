@@ -17,7 +17,7 @@
 <!-- <h1 class="category_name">{{ title }}</h1> -->
   <div>
     <ul class="recipe">
-      <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
+      <li class="recipe_hairetu delay-time2 box fadeLeftTrigger" v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/recipe/${content.id}`" class="container">
         <img :src=content.eyecatch.url>
         <div class="Time_recipe">
@@ -106,6 +106,25 @@ export default {
         // });
       });
     }
+
+    function fadeAnime(){
+      $('.fadeLeftTrigger').each(function(){ //fadeLeftTriggerというクラス名が
+        var elemPos = $(this).offset().top-50;//要素より、50px上の
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll >= elemPos - windowHeight){
+        $(this).addClass('fadeLeft');// 画面内に入ったらfadeLeftというクラス名を追記
+        }else{
+        $(this).removeClass('fadeLeft');// 画面外に出たらfadeLeftというクラス名を外す
+        }
+      });
+    }
+
+    // 画面をスクロールをしたら動かしたい場合の記述
+    $(window).scroll(function (){
+      fadeAnime();/* アニメーション用の関数を呼ぶ*/
+    });// ここまで画面をスクロールをしたら動かしたい場合の記述
+    
   }
   
 }
@@ -152,5 +171,30 @@ export default {
 }
 .Pagination > * + * {
   margin-left: 8px;
+}
+
+/* 左から */
+
+.fadeLeft{
+animation-name:fadeLeftAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeLeftAnime{
+  from {
+    opacity: 0;
+  transform: translateX(-100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateX(0);
+  }
+}
+
+.delay-time2{
+  animation-delay: 0.3s;
 }
 </style>
