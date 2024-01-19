@@ -212,15 +212,15 @@
     <!--カテゴリーの表示-->
     <div class="category_hyouji">
       <p class="p1_midasi">イチオシカテゴリー</p>
-      <ul class="category_1">
-        <li class="category_2" v-for="content in contents" :key="content.id">
-          <nuxt-link :to="`category/${content.id}/page/1`">
-            <img :src=content.category_img.url width="40%"><br>
-            {{ content.category_name }}<br>
-          </nuxt-link>
-        </li>
-      </ul>
-    </div>
+          <ul class="category_1">
+            <li class="delay-time04 box flipLeftTrigger" v-for="content in contents" :key="content.id">
+              <nuxt-link :to="`category/${content.id}/page/1`">
+                <img :src=content.category_img.url width="40%"><br>
+                {{ content.category_name }}<br>
+              </nuxt-link>
+            </li>
+          </ul>
+      </div>
     </section>
 
   <!--問い合わせフォーム-->
@@ -359,6 +359,7 @@ export default {
   },
   head() {
       return {
+        contents: "",
         title: 'Bavarois',
         meta: [
           // hid is used as unique identifier. Do not use `vmid` for it as it will not work
@@ -411,6 +412,28 @@ export default {
       e.target.elements.email.value = '';
       e.target.elements.message.value = '';
     });
+
+
+    //スクロールアニメーション
+    function fadeAnime(){
+      $('.flipLeftTrigger').each(function(){ //flipLeftTriggerというクラス名が
+      var elemPos = $(this).offset().top-50;//要素より、50px上の
+      var scroll = $(window).scrollTop();
+      var windowHeight = $(window).height();
+      if (scroll >= elemPos - windowHeight){
+      $(this).addClass('flipLeft');// 画面内に入ったらflipLeftというクラス名を追記
+      }else{
+      $(this).removeClass('flipLeft');// 画面外に出たらflipLeftというクラス名を外す
+      }
+      });
+    }
+
+    // 画面をスクロールをしたら動かしたい場合の記述
+      $(window).scroll(function (){
+        fadeAnime();/* アニメーション用の関数を呼ぶ*/
+      });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+    
   },
 }
 </script>

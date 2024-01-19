@@ -1108,3 +1108,32 @@ opacity: 0;
     .paginetion{
       padding-bottom: 50px;
     }
+
+
+    .flipLeft{
+      text-align: center;
+      font-family: 'Cormorant', serif;
+      font-size: 100%;
+      font-weight: bold;
+      animation-name:flipLeftAnime;
+      animation-duration:1.8s;
+      animation-fill-mode:forwards;
+      perspective-origin:left center;
+      opacity:0;
+      }
+      
+      @keyframes flipLeftAnime{
+        from {
+         transform: perspective(600px) translate3d(0, 0, 0) rotateY(30deg);
+        opacity: 0;
+        }
+      
+        to {
+        transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
+        opacity: 1;
+        }
+      }
+
+      .delay-time04{  
+        animation-delay: 0.4s;
+      }
