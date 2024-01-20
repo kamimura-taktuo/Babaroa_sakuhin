@@ -38,7 +38,7 @@
 
 
     <!--手順-->
-    <div class="repeat" v-for="item in procedure" :key="item.body" style="display: flex;">
+    <div class="repeat delay-time2 box blurTrigger" v-for="item in procedure" :key="item.body" style="display: flex;">
       <div v-html="item.body" style="flex: 0 0 50%; padding: 0 10% 0 10%;" class="repeat_text"></div>
       <img :src="item.img.url" style="flex: 0 0 45%; margin-bottom: 30px;" class="repeat_img">
     </div>    
@@ -95,7 +95,62 @@ export default {
       
     )
     return data
+  },
+
+  mounted(){
+
+    function fadeAnime(){
+     $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
+    var elemPos = $(this).offset().top-50;//要素より、50px上の
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+    $(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
+    }else{
+    $(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
+    }
+    }); 
+
+    }
+
+    // 画面をスクロールをしたら動かしたい場合の記述
+      $(window).scroll(function (){
+        fadeAnime();/* アニメーション用の関数を呼ぶ*/
+      });// ここまで画面をスクロールをしたら動かしたい場合の記述
   }
 }
 
 </script>
+
+<style>
+/* ぼかしから出現 */
+.blur{
+  animation-name:blurAnime;
+  animation-duration:1s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+  filter: blur(10px);
+  transform: scale(1.02);
+  opacity: 0;
+  }
+
+  to {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+  }
+}
+
+/* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+ 
+.blurTrigger{
+    opacity: 0;
+}
+
+.delay-time2{  
+  animation-delay: 0.2s;
+}
+</style>
