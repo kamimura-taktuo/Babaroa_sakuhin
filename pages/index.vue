@@ -67,10 +67,6 @@
                 </div>
                 <div>
                   <video id="video" class="video1" autoplay loop muted playsinline>
-                    <!-- <source
-                      :src="require('../assets/Video/sasikomi.mp4')"
-                      type="Video/mp4"
-                    /> -->
                     <source
                       src="/sasikomi.mp4"
                       type="Video/mp4"
@@ -270,30 +266,7 @@
     <!-- footer -->
     <div>
          <footer>
-          <!-- <ul class="footer-menu">
-           <li>home</li>
-           <li>about</li>
-           <li>service</li>
-           <li>Contact Us</li>
-          </ul> -->
-
-          <!-- <ul class="social-media-list">
-          <li><a href="#" target="_blank" class="contact-icon">
-            <img src="@/assets/img/yt_icon_mono_dark.png" style="width:30px;">
-            <i class="fa fa-github" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-codepen" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fa fa-twitter" aria-hidden="true"></i></a>
-          </li>
-          <li><a href="#" target="_blank" class="contact-icon">
-            <i class="fab fa-line"></i>
-            </a>
-          </li>       
-        </ul> -->
-        <a href="/">トップへ戻る</a>
+          <a href="/">トップへ戻る</a>
           <p>© All rights reserved by dmmwebcampmedia.</p>
         </footer>
     </div>
@@ -454,34 +427,4 @@ export default {
 form{
   margin-bottom: 3rem;
 }
-
-/* input[type=text] {
-  font-size: 1.2rem;
-  padding: 4px 8px;
-  width: 245px;
-  box-sizing: border-box;
-  border-radius: 20px;
-  border: solid 1px #ccc;
-  background-color: #fff;
-  font-family: "Ubuntu", "Noto Sans JP", sans-serif;
-}
-
-input[type=text]:focus {
-  outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
-} */
-
-/* button {
-  z-index: 1;
-  height:39px;
-  width:50px;	
-  position:absolute; 
-  left:200px; 
-  top:0;
-  background:#7fbfff;
-  color:#ffffff;
-  border:none;
-  border-radius:0 25px 25px 0;
-} */
-
 </style>
