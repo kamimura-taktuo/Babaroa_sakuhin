@@ -1117,7 +1117,7 @@ opacity: 0;
       font-size: 100%;
       font-weight: bold;
       animation-name:flipLeftAnime;
-      animation-duration:2s;
+      animation-duration:1.0s;
       animation-fill-mode:forwards;
       perspective-origin:left center;
       opacity:0;
@@ -1142,7 +1142,7 @@ opacity: 0;
       /* 拡大 */
       .zoomIn{
         animation-name:zoomInAnime;
-        animation-duration:0.5s;
+        animation-duration:1.0s;
         animation-fill-mode:forwards;
       }
 

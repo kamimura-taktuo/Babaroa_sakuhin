@@ -80,11 +80,14 @@
         <div>
           <img class="absolute" src="../assets/img/logo.png" />
         </div>
- 
+    <!--タイトル-->
     <div style="text-align: center; margin: auto;" >
         <p class="title">~One step closer to fashion~</p>
         <p class=p1>大人なスイーツレシピ</p>
     </div>
+
+    <!--私たちについて-->
+
  
     <!--おすすめスイーツ-->
     <section class="area" id="area-1">
