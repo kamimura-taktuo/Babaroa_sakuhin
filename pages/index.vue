@@ -35,9 +35,10 @@
 
           
           <ul class="menu" id="page-link">
-            <li><a href="#area-1">おすすめ</a></li>
-            <li><a href="#area-2">カテゴリー</a></li>
-            <li><a href="#area-3">問い合わせ</a></li>
+            <li><a href="#area-1">私たちについて</a></li>
+            <li><a href="#area-2">おすすめ</a></li>
+            <li><a href="#area-3">カテゴリー</a></li>
+            <li><a href="#area-4">問い合わせ</a></li>
           </ul>
 
       </header>
@@ -87,10 +88,19 @@
     </div>
 
     <!--私たちについて-->
+    <section class="area" id="area-1">
+    <div class="menber">
+      <p class="p1_midasi">私たちについて</p><br>
+      <p class="syoukai">私たちはたくさんの人たちにお菓子作りを楽しんでもらいたいという思いでこのサイトを作りました</p>
+      <p class="syoukai">このサイトを作ろうと思った経緯やメンバーについて詳しくまとめてみました</p>
+      <input id="syoukai_btn" type="button" name="submit" value="詳しくは" @click="syoukai" class="syoukai_buttom">
+    </div>
+    </section>
+
 
  
     <!--おすすめスイーツ-->
-    <section class="area" id="area-1">
+    <section class="area" id="area-2">
     <div class="osusume">
         <p class ="p1_midasi">おすすめスイーツ</p>
           <slick :options="option2" class="slider-for" ref="sliderFor">
@@ -187,7 +197,7 @@
     </section>
 
     <!--洋菓子・和菓子-->
-    <section class="area" id="area-2">
+    <section class="area" id="area-3">
       <p class="p1_midasi">カテゴリー</p>
     <div class="box zoomInTrigger">
       <div id="cards">
@@ -223,7 +233,7 @@
     </section>
 
   <!--問い合わせフォーム-->
-  <section class="area" id="area-3">
+  <section class="area" id="area-4">
   <section id="contact">
   
   <h1 class="section-header">Contact</h1>
@@ -259,7 +269,7 @@
       </button>
       
     </form>
-    
+
   </div>
   
   </section>
@@ -360,6 +370,10 @@ export default {
     searchRecipe() {
       console.log(this.searchText)
       // console.log(this.$params)
+    },
+
+    syoukai(){
+      this.$router.push(`syoukai`);
     },
 
   },

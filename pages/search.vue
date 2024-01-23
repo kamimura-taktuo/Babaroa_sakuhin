@@ -31,10 +31,10 @@
   </div> -->
 
   <!-- 検索結果件数 -->
-  <!-- <p class="search-result"> {{ totalCount }}件の検索結果</p> -->
+  <p class="search-result"> {{ totalCount }}件の検索結果</p>
 
  <!--検索記事-->
-<div>
+<div v-if="totalCount > 0">
   <ul class="recipe">
       <li class="recipe_hairetu" v-for="content in contents" :key="content.id">
         <nuxt-link :to="`/recipe/${content.id}`" class="container">
@@ -47,10 +47,28 @@
       </li>
   </ul>
 </div>
+<div v-else>
+  <p class="error">申し訳ございません。レシピは見つかりませんでした</p>
 
+</div>
+
+<!--Topページに戻るボタン-->
+<div>
+  <img src="@/assets/img/topへ.png">
+</div>
+
+
+<!-- footer
+    <div>
+         <footer>
+          <a href="/">トップへ戻る</a>
+          <p>© All rights reserved by dmmwebcampmedia.</p>
+        </footer>
+    </div> -->
   
 
 </div>
+
 </template>
 
 <script>
@@ -148,9 +166,9 @@ input[type=text]:focus {
   color: #fff;
 }
 .search-result {
-  padding: 0 0 0 10px;
+  padding: 70px 0 0 30px;
   margin-top: 3rem;
-  font-size: 1.4rem;
+  font-size: 2.5rem;
   color: #6F959E;
   margin-bottom: 3rem;
 }
@@ -183,5 +201,10 @@ input[type=text]:focus {
   color: 888;
   opacity: 0.7;
   letter-spacing: 1px;
+}
+.error{
+  color: #fff;
+  text-align: center;
+  font-size: 3vw;
 }
 </style>
