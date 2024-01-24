@@ -517,6 +517,9 @@ opacity: 0;
     ul.footer-menu li {
     display: inline;
     }
+    .footer_text{
+      color: #fff;
+    }
 
 
     /*おすすめスイーツ*/
