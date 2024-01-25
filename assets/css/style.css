@@ -159,6 +159,10 @@ body {background-color: rgb(0, 0, 0);}
   font-family: "myfont";
   src: url("@/assets/font/くまもと本丸ゴシックmini.otf") format("opentype");
 }
+@font-face {
+  font-family: "titlefont";
+  src: url("@/assets/font/ipaexm.ttf") format("truetype");
+}
 .p1 {
     color: white;
     font-size: 3.5vw;

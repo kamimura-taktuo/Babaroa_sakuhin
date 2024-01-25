@@ -21,19 +21,21 @@
     <!--メンバー紹介-->
     <p class="midasi_syoukai">メンバー紹介</p>
     <div class="menber_syoukai">
-        <div class="team_member">
-            <img src="@/assets/img/アップルパイ.png">
+        <div class="team_member box blurTrigger">
+            <img src="@/assets/img/プロフィール.png">
             <div>
                 <p class="member_name">SOMA</p>
                 <p class="member_tag">リーダー</p>
+                <p class="member_tag">好きなお菓子：キャラメルポップコーン</p>
             </div>
         </div>
 
-        <div class="team_member">
-            <img src="@/assets/img/アップルパイ.png">
+        <div class="team_member box blurTrigger">
+            <img src="@/assets/img/プロフィール２.png">
             <div>
                 <p class="member_name">TAKUTO</p>
                 <p class="member_tag">サブリーダー</p>
+                <p class="member_tag">好きなお菓子：クラブジャム</p>
             </div>
         </div>
 
@@ -41,12 +43,12 @@
 
     <!--ギャラリー-->
 	<ul class="gallery">
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/01.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/01.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/02.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/02.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/03.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/03.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/04.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/04.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" alt=""></a></li>
+        <li><a href="/recipe/b54zvgspd_ct" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/チョコレートケーキ.png" alt=""></a></li>
+        <li><a href="/recipe/o95a73p_ri" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/イチゴタルト.png" alt=""></a></li>
+        <li><a href="/recipe/0rkfpp1kqcmj" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/おしるこ.jpg" alt=""></a></li>
+        <li><a href="/recipe/a_5pzumycx7" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/バスクチーズケーキ.png" alt=""></a></li>
+        <li><a href="/recipe/w5bgfmjl6xqr" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/抹茶プリン.jpg" alt=""></a></li>
+        <li><a href="/recipe/wg3_al4u-a_i" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/キャラメルポップコーン.png" alt=""></a></li>
     </ul>
 
 
@@ -60,12 +62,12 @@
 
     <!--ギャラリー-->
 	<ul class="gallery">
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/01.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/01.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/02.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/02.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/03.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/03.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/04.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/04.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" alt=""></a></li>
-        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" alt=""></a></li>
+        <li><a href="/recipe/5eaytaast" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/抹茶カヌレ.png" alt=""></a></li>
+        <li><a href="/recipe/1nkp7___0sy" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/リングドーナツ.png" alt=""></a></li>
+        <li><a href="/recipe/0rkfpp1kqcmj" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/チョコレートムース.png" alt=""></a></li>
+        <li><a href="/recipe/e39r85us80k" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/カステラ.png" alt=""></a></li>
+        <li><a href="/recipe/bf36imk134x" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/わらび餅.png" alt=""></a></li>
+        <li><a href="/recipe/2_3w4yjfl-f9" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="../assets/img/ティラミス.png" alt=""></a></li>
     </ul>
 
     <!--タイムライン-->
@@ -78,7 +80,8 @@
                     <p class="flag">Webサイト作成との出会い</p>
                 </div>
                 <div class="desc">
-                    <p>1年生の時にWebサイト制作に所属し、HTMLやCSS、JavaScriptの基本的な学習を進めてきました。</p>
+                    <p>Webサイト制作のゼミに所属</p>
+                    <p>HTMLやCSS、JavaScriptの基本的な学習</p>
                 </div>
             </div>
 
@@ -100,7 +103,7 @@
                     <p class="flag">卒業制作・後編</p>
                 </div>
                 <div class="desc">
-                    <p>中間発表で出た課題の修正</p>
+                    <p>中間発表で出た課題の追加・修正</p>
                     <p>作品発表に必要な資料作り</p>
                 </div>
             </div>
@@ -137,12 +140,28 @@ $('.gallery li').each(function(){
         $(this).removeClass('flipLeft');
     }
 });
+
+$('.blurTrigger').each(function(){ //blurTriggerというクラス名が
+    var elemPos = $(this).offset().top-50;//要素より、50px上の
+    var scroll = $(window).scrollTop();
+    var windowHeight = $(window).height();
+    if (scroll >= elemPos - windowHeight){
+    $(this).addClass('blur');// 画面内に入ったらblurというクラス名を追記
+    }else{
+    $(this).removeClass('blur');// 画面外に出たらblurというクラス名を外す
+    }
+    }); 
 }
 
 // 画面をスクロールをしたら動かしたい場合の記述
   $(window).scroll(function (){
     fadeAnime();/* アニメーション用の関数を呼ぶ*/
   });// ここまで画面をスクロールをしたら動かしたい場合の記述
+
+  // 画面が読み込まれたらすぐに動かしたい場合の記述
+  $(window).on('load', function(){
+    fadeAnime();/* アニメーション用の関数を呼ぶ*/
+  });// ここまで画面が読み込まれたらすぐに動かしたい場合の記述
 }
 
 }
@@ -151,15 +170,17 @@ $('.gallery li').each(function(){
 
 <style>
 .top_title{
+    font-family: "titlefont", sans-serif;
     padding: 70px 0 50px 0;
     color: #fff;
     text-align: center;
-    font-size: 5vw;
+    font-size: 7vw;
+    /* font-weight: bold; */
 }
 
 .midasi_syoukai{
-    padding: 0 0 0 20px;
-    font-size: 3vw;
+    padding: 0 0 0 54px;
+    font-size: 5vw;
     color: #fff;
     font-family: "myfont", sans-serif;
 }
@@ -174,7 +195,8 @@ $('.gallery li').each(function(){
 
 .menber_syoukai img{
     width: 90%;
-    /* height: 64px; */
+    /* height: 150px; */
+    border-radius: 50%;
 }
 .team_member{
     text-align: center;
@@ -182,10 +204,13 @@ $('.gallery li').each(function(){
 }
 
 .member_name{
+    font-size: 1.5vw;
+    font-weight: bold;
     color: #fff;
 }
 
 .member_tag{
+    font-size: 1.2vw;
     color: #fff;
 }
 
@@ -358,4 +383,24 @@ opacity: 0;
     font-size: 1.5vw;
 }
 
+/* ぼかしから出現 */
+.blur{
+  animation-name:blurAnime;
+  animation-duration:2.5s;
+  animation-fill-mode:forwards;
+}
+
+@keyframes blurAnime{
+  from {
+  filter: blur(10px);
+  transform: scale(1.02);
+  opacity: 0;
+  }
+
+  to {
+  filter: blur(0);
+  transform: scale(1);
+  opacity: 1;
+  }
+}
 </style>

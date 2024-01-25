@@ -49,6 +49,7 @@
 </div>
 <div v-else>
   <p class="error">申し訳ございません。レシピは見つかりませんでした</p>
+  <img src="@/assets/img/お辞儀2.png" class="error_png">
 
 </div>
 
@@ -207,8 +208,13 @@ input[type=text]:focus {
   text-align: center;
   font-size: 3vw;
 }
+.error_png{
+  width: 15%;
+  display: block;
+  margin: auto;
+}
 .top_buttom{
-  margin: 0 0 0 auto;
+  margin: 0 20px 0 auto;
   width: 120px;
   height: 70px;
 }
@@ -216,4 +222,5 @@ input[type=text]:focus {
   width: 120px;
   height: 70px;
 }
+
 </style>
