@@ -48,6 +48,26 @@
         <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" alt=""></a></li>
         <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" alt=""></a></li>
     </ul>
+
+
+    <!--ビィジョン-->
+    <p class="midasi_syoukai">Vision</p>
+    <div class="vision">
+        <p class="vision_title">男性でも女性でも利用しやすいデザインのWebサイト</p>
+        <p class="vision_naiyou">2019年以降、世間では新型コロナウイルスが流行しお家にいる時間が増え、自炊をする人たちの割合も増えてきました。</p>
+        <p class="vision_naiyou">そういった背景のもとこのサイトを活用していろんなお菓子作りに出会ってほしいです。</p>
+    </div>
+
+    <!--ギャラリー-->
+	<ul class="gallery">
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/01.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/01.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/02.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/02.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/03.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/03.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/04.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/04.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/05.jpg" alt=""></a></li>
+        <li><a href="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" data-lightbox="gallery1" data-title="グループ1キャプション"><img src="https://coco-factory.jp/ugokuweb/wp-content/themes/ugokuweb/data/6-2-1/img/06.jpg" alt=""></a></li>
+    </ul>
+
     <!--タイムライン-->
     <p class="midasi_syoukai">タイムライン</p>
     <div>
@@ -65,23 +85,23 @@
             <div class="timeline_item">
                 <div class="time_date">
                     <p class="time">2023</p>
-                    <p class="flag">卒業制作の目的と背景</p>
+                    <p class="flag">卒業制作・前編</p>
                 </div>
                 <div class="desc">
-                    <p>このサイトの目的は、男性でも女性でも利用しやすいようなデザインのサイトにすることです。</p>
-                    <p>その背景として、当時世の中では新型コロナウイルスが、流行っておりおうちにいる時間が増えることで料理をする人も増えてきました。</p>
-                    <p>そこで、今まで見たことのないようなデザインのレシピサイトを作ってみたいという思いでこのサイトの作成に至りました。</p>
+                    <p>まずは、作品のテーマを決め実際にあるお菓子のレシピサイトの調査を行いました。</p>
+                    <p>そこから要件定義書を作成し、レシピサイトのデザインを作成</p>
+                    <p>デザインをもとにコーディングの作業、中間発表で出た課題のリストアップ</p>
                 </div>
             </div>
 
             <div class="timeline_item">
                 <div class="time_date">
                     <p class="time">2024</p>
-                    <p class="flag">作品制作について</p>
+                    <p class="flag">卒業制作・後編</p>
                 </div>
                 <div class="desc">
-                    <p>作品の開発をしていく中で、１年生の時に学習した基礎的な知識だけでは足りず、わからないところは調べときには先生に質問し、知識と経験を深めていきました。</p>
-                    <p>できなかったことができるようになったときの達成感やWebサイト制作の楽しさを感じたことでこのサイトを完成させることができました。</p>
+                    <p>中間発表で出た課題の修正</p>
+                    <p>作品発表に必要な資料作り</p>
                 </div>
             </div>
         </div>
@@ -141,6 +161,7 @@ $('.gallery li').each(function(){
     padding: 0 0 0 20px;
     font-size: 3vw;
     color: #fff;
+    font-family: "myfont", sans-serif;
 }
 
 .menber_syoukai{
@@ -152,8 +173,8 @@ $('.gallery li').each(function(){
 }
 
 .menber_syoukai img{
-    width: 64px;
-    height: 64px;
+    width: 90%;
+    /* height: 64px; */
 }
 .team_member{
     text-align: center;
@@ -321,6 +342,20 @@ opacity: 0;
   transform: perspective(600px) translate3d(0, 0, 0) rotateY(0deg);
   opacity: 1;
   }
+}
+
+.vision{
+    text-align: center;
+}
+.vision_title{
+    color: #fff;
+    font-size: 2vw;
+    font-weight: bold;
+    
+}
+.vision_naiyou{
+    color: #fff;
+    font-size: 1.5vw;
 }
 
 </style>

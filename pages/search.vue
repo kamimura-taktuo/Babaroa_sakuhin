@@ -53,8 +53,8 @@
 </div>
 
 <!--Topページに戻るボタン-->
-<div>
-  <img src="@/assets/img/topへ.png">
+<div class="top_buttom">
+  <a href="/"><img src="@/assets/img/topへ.png"></a>
 </div>
 
 
@@ -206,5 +206,14 @@ input[type=text]:focus {
   color: #fff;
   text-align: center;
   font-size: 3vw;
+}
+.top_buttom{
+  margin: 0 0 0 auto;
+  width: 120px;
+  height: 70px;
+}
+.top_buttom img{
+  width: 120px;
+  height: 70px;
 }
 </style>
