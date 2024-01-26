@@ -84,7 +84,7 @@
     <!--タイトル-->
     <div style="text-align: center; margin: auto;" class="title">
         <p>~One step closer to fashion~</p>
-        <p class=p1>大人なスイーツレシピ</p>
+        <p class=p1>スイーツレシピ</p>
     </div>
 
     <!--私たちについて-->

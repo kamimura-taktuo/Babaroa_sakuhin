@@ -16,6 +16,13 @@
     </h1>
   </div>
 
+
+  <!-- トグルボタン -->
+<div class="toggle-container">
+<input type="checkbox" id="wakeLockCheckbox" class="toggle-checkbox">
+<label for="wakeLockCheckbox" class="toggle-label"></label>
+</div>
+
     <h1 class="recipe_title">{{ title }}</h1>
     <!--スイーツの画像とカロリーの並び-->
     <div class="calorie">
@@ -34,9 +41,6 @@
     </div>
 
     
-
-
-
     <!--手順-->
     <div class="repeat delay-time2 box blurTrigger" v-for="item in procedure" :key="item.body" style="display: flex;">
       <div v-html="item.body" style="flex: 0 0 50%; padding: 0 10% 0 10%;" class="repeat_text"></div>
@@ -117,8 +121,34 @@ export default {
       $(window).scroll(function (){
         fadeAnime();/* アニメーション用の関数を呼ぶ*/
       });// ここまで画面をスクロールをしたら動かしたい場合の記述
+  
+  document.addEventListener('DOMContentLoaded', function () {
+   const wakeLockCheckbox = document.getElementById('wakeLockCheckbox');
+   let wakeLock = null;
+   wakeLockCheckbox.addEventListener('change', async function () {
+       const isChecked = wakeLockCheckbox.checked;
+       try {
+           if (isChecked) {
+               // Wake Lockを要求
+               wakeLock = await navigator.wakeLock.request('screen');
+               console.log('Wake Lockを有効にしました。');
+           } else {
+               // Wake Lockを解除
+               wakeLock.release();
+               console.log('Wake Lockを無効にしました。');
+           }
+       } catch (error) {
+           console.error('Wake Lockの要求や解除中にエラーが発生しました:', error);
+       }
+   });
+});
+  
   }
+
+
 }
+
+
 
 </script>
 
@@ -152,5 +182,53 @@ export default {
 
 .delay-time2{  
   animation-delay: 0.2s;
+}
+
+/* トグルボタンのスタイル */
+.toggle-container {
+
+   /* display: inline-block; */
+   /* position: fixed; */
+   /* top: 10px;
+   right: 30px; */
+   padding: 20px 30px 0 0;
+   float: right;
+   
+}
+.toggle-checkbox {
+   display: none;
+}
+.toggle-label {
+   display: block;
+   width: 70px;
+   height: 20px;
+   background-color: #ccc;
+   border-radius: 10px;
+   position: relative;
+   top: 0;
+   left: 0;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+.toggle-checkbox:checked + .toggle-label {
+   background-color: #383838;
+}
+
+/* オフのスタイル */
+.toggle-label::before {
+   content: "OFF";
+   position: absolute;
+   top: 50%;
+   left: 8px;
+   transform: translateY(-50%);
+   color: #000000;
+   font-weight: bold;
+}
+/* オンのスタイル */
+.toggle-checkbox:checked + .toggle-label::before {
+   content: "ON";
+   color: #fff;
+   left: calc(100% - 28px);
+   font-weight: bold;
 }
 </style>
