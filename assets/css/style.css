@@ -1101,6 +1101,7 @@ opacity: 0;
       height: auto;
       text-align: center;
       align-items: center;
+      padding-bottom: 70px;
     }
     .repeat_img{
       border-radius: 32px;

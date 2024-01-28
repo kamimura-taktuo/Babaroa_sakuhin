@@ -22,7 +22,7 @@
     <p class="midasi_syoukai">メンバー紹介</p>
     <div class="menber_syoukai">
         <div class="team_member box blurTrigger">
-            <img src="@/assets/img/プロフィール.png">
+            <img src="@/assets/img/プロフィール3.png">
             <div>
                 <p class="member_name">SOMA</p>
                 <p class="member_tag">リーダー</p>
@@ -197,7 +197,7 @@ $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
 }
 
 .menber_syoukai img{
-    width: 90%;
+    width: 50%;
     /* height: 150px; */
     border-radius: 50%;
 }
