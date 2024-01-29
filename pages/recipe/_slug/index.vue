@@ -19,6 +19,7 @@
 
   <!-- トグルボタン -->
 <div class="toggle-container">
+<p>スリープモード</p>
 <input type="checkbox" id="wakeLockCheckbox" class="toggle-checkbox">
 <label for="wakeLockCheckbox" class="toggle-label"></label>
 </div>
@@ -191,7 +192,7 @@ export default {
    /* position: fixed; */
    /* top: 10px;
    right: 30px; */
-   padding: 20px 30px 0 0;
+   padding: 0 20px 0 0;
    float: right;
    
 }

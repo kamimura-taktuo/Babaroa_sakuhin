@@ -120,8 +120,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/0f1jwlvszx"><img style="width: 75%;" class="png_1" src="@/assets/img/おはぎ画像.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">おはぎ</p>
-                          <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　332kcal</p><br>
+                          <p class="p6">製作時間　120分</p>
+                          <p class="p6">カロリー　194kcal</p><br>
                           <a href="/recipe/0f1jwlvszx"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -131,8 +131,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%; text-align: center;"><a href="/recipe/bf36imk134x"><img style="width: 75%;" class="png_1" src="@/assets/img/わらび餅.png"></a></div>
                       <div class="slide-item__text">
                         <p class="p6">わらび餅</p>
-                        <p class="p6">製作時間　30分</p>
-                        <p class="p6">カロリー　280kcal</p><br>
+                        <p class="p6">製作時間　20分</p>
+                        <p class="p6">カロリー　400kcal</p><br>
                         <a href="/recipe/bf36imk134x"><img src="../assets/img/こちらから.png" class="kotira"></a>
                       </div>
                   </div>
@@ -142,8 +142,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/wtmwzn68w"><img style="width: 75%;" class="png_1" src="@/assets/img/アップルパイ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">アップルパイ</p>
-                          <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　304kcal</p><br>
+                          <p class="p6">製作時間　60分</p>
+                          <p class="p6">カロリー　239kcal</p><br>
                           <a href="/recipe/wtmwzn68w"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
@@ -153,8 +153,8 @@
                       <div class="slide-item__img" style="flex: 0 0 50%;"><a href="/recipe/geb_65syw"><img style="width: 75%;" class="png_1" src="@/assets/img/カッサータ.png"></a></div>
                         <div class="slide-item__text">
                           <p class="p6">カッサータ</p>
-                          <p class="p6">製作時間　30分</p>
-                          <p class="p6">カロリー　245kcal</p><br>
+                          <p class="p6">製作時間　180分</p>
+                          <p class="p6">カロリー　257kcal</p><br>
                           <a href="/recipe/geb_65syw"><img src="../assets/img/こちらから.png" class="kotira"></a>
                         </div>
                   </div>
