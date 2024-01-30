@@ -35,7 +35,7 @@
             <div>
                 <p class="member_name">TAKUTO</p>
                 <p class="member_tag">サブリーダー</p>
-                <p class="member_tag">好きなお菓子：クラブジャム</p>
+                <p class="member_tag">好きなお菓子：八つ橋</p>
             </div>
         </div>
 

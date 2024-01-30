@@ -163,6 +163,10 @@ body {background-color: rgb(0, 0, 0);}
   font-family: "titlefont";
   src: url("@/assets/font/ipaexm.ttf") format("truetype");
 }
+@font-face {
+  font-family: "mainfont";
+  src: url("@/assets/font/851MkPOP_101.ttf") format("truetype");
+}
 .p1 {
     color: white;
     font-size: 3.5vw;
@@ -1102,6 +1106,7 @@ opacity: 0;
       text-align: center;
       align-items: center;
       padding-bottom: 70px;
+      
     }
     .repeat_img{
       border-radius: 32px;
@@ -1113,6 +1118,7 @@ opacity: 0;
 
     .repeat_text{
       font-size: 1.5vw;
+      font-family: "titlefont", sans-serif;
     }
 
     .paginetion{
