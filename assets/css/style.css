@@ -167,6 +167,10 @@ body {background-color: rgb(0, 0, 0);}
   font-family: "mainfont";
   src: url("@/assets/font/851MkPOP_101.ttf") format("truetype");
 }
+@font-face {
+  font-family: "naiyoufont";
+  src: url("@/assets/font/HannariMincho-Regular.otf") format("opentype");
+}
 .p1 {
     color: white;
     font-size: 3.5vw;
@@ -629,9 +633,11 @@ opacity: 0;
       border: 2px solid #ffffff;
       border-radius: 16px;
       width: 50%;
+      font-family: "titlefont", sans-serif;;
     }
     .calorie_text{
       font-size: 2.5vw;
+      padding-top: 5%;
     }
 
     .recipe_title {
@@ -648,6 +654,7 @@ opacity: 0;
     .material{
       padding: 0 10%;
       font-size: 3vw;
+      font-family: "titlefont", sans-serif;;
     }
 
     .material_tag{

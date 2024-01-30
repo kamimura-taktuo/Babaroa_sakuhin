@@ -19,7 +19,7 @@
 
   <!-- トグルボタン -->
 <div class="toggle-container">
-<p>スリープモード</p>
+<p>スリープ解除</p>
 <input type="checkbox" id="wakeLockCheckbox" class="toggle-checkbox">
 <label for="wakeLockCheckbox" class="toggle-label"></label>
 </div>
