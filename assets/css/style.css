@@ -590,7 +590,7 @@ opacity: 0;
       display: flex;
       flex-flow:row wrap;
       justify-content: center;
-      /* grid-template-columns: 1fr 1fr 1fr; */
+      /* grid-template-columns: 1fr 1fr; */
       height: 100%;
       margin-top: 80px;
     }
@@ -1126,6 +1126,7 @@ opacity: 0;
     .repeat_text{
       font-size: 1.5vw;
       font-family: "titlefont", sans-serif;
+      text-align: left;
     }
 
     .paginetion{
