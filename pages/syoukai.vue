@@ -257,7 +257,7 @@ $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
 	background: #000000;
 }
 .cp_timeline04 .timeline_item .time_date .flag {
-	font-size: 1.5em;
+	font-size: 2.0vw;
 	font-weight: bold;
 	margin: 0;
 	margin-top: -60px;
@@ -265,7 +265,7 @@ $('.blurTrigger').each(function(){ //blurTriggerというクラス名が
 }
 .cp_timeline04 .timeline_item .desc {
     color: #fff;
-	font-size: 0.8em;
+	font-size: 1.6vw;
 	line-height: 20px;
 	margin-top: 10px;
 	padding-left: 20px;

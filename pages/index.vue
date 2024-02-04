@@ -185,13 +185,13 @@
         
       <!-- <slick :options="option3"> -->
         <slick :options="option3" class="slider-nav" ref="sliderNav">
-          <div><img class="png_2" src="@/assets/img/どら焼き画像.png"><p class="p6">どら焼き</p></div>
-          <div><img class="png_2" src="@/assets/img/おはぎ画像.png"><p class="p6">おはぎ</p></div>
-          <div><img class="png_2" src="@/assets/img/わらび餅.png"><p class="p6">わらび餅</p></div>
-          <div><img class="png_2" src="@/assets/img/アップルパイ.png"><p class="p6">アップルパイ</p></div>
-          <div><img class="png_2" src="@/assets/img/カッサータ.png"><p class="p6">カッサータ</p></div>
-          <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="p6">チーズタルト</p></div>
-          <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="p6">抹茶カヌレ</p></div>
+          <div><img class="png_2" src="@/assets/img/どら焼き画像.png"><p class="osusume_title">どら焼き</p></div>
+          <div><img class="png_2" src="@/assets/img/おはぎ画像.png"><p class="osusume_title">おはぎ</p></div>
+          <div><img class="png_2" src="@/assets/img/わらび餅.png"><p class="osusume_title">わらび餅</p></div>
+          <div><img class="png_2" src="@/assets/img/アップルパイ.png"><p class="osusume_title">アップルパイ</p></div>
+          <div><img class="png_2" src="@/assets/img/カッサータ.png"><p class="osusume_title">カッサータ</p></div>
+          <div><img class="png_2" src="@/assets/img/チーズタルト.png"><p class="osusume_title">チーズタルト</p></div>
+          <div><img class="png_2" src="@/assets/img/抹茶カヌレ.png"><p class="osusume_title">抹茶カヌレ</p></div>
         </slick>
     </div>
     </section>
@@ -222,7 +222,7 @@
     <div class="category_hyouji">
       <p class="p1_midasi">イチオシカテゴリー</p>
           <ul class="category_1">
-            <li class="delay-time04 box flipLeftTrigger" v-for="content in contents" :key="content.id">
+            <li class="itchioshi delay-time04 box flipLeftTrigger" v-for="content in contents" :key="content.id">
               <nuxt-link :to="`category/${content.id}/page/1`">
                 <img :src=content.category_img.url width="40%"><br>
                 {{ content.category_name }}<br>
@@ -443,5 +443,15 @@ export default {
 
 form{
   margin-bottom: 3rem;
+}
+
+.itchioshi{
+  font-size: 1.5vw;
+}
+
+.osusume_title{
+  color: #fff;
+  font-size: 2.2vw;
+  font-family: "osusume", sans-serif;
 }
 </style>

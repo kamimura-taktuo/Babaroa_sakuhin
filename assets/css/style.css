@@ -171,6 +171,10 @@ body {background-color: rgb(0, 0, 0);}
   font-family: "naiyoufont";
   src: url("@/assets/font/HannariMincho-Regular.otf") format("opentype");
 }
+@font-face {
+  font-family: "osusume";
+  src: url("@/assets/font/Lato-Italic.ttf") format("truetype"); 
+}
 .p1 {
     color: white;
     font-size: 3.5vw;
@@ -1124,7 +1128,7 @@ opacity: 0;
     }
 
     .repeat_text{
-      font-size: 1.5vw;
+      font-size: 2.0vw;
       font-family: "titlefont", sans-serif;
       text-align: left;
     }
@@ -1195,7 +1199,7 @@ opacity: 0;
       }
 
       .syoukai{
-        font-size: 1.5vw;
+        font-size: 1.8vw;
         padding: 15px 0;
         text-align: center;
         color: #fff;
